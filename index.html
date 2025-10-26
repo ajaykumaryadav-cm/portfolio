@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janmejay Vashisht - Senior Tender Executive | 20+ Years Experience</title>
+    <meta name="description" content="Janmejay Vashisht - Senior Tender Executive with 20+ years experience in cable industry. Expertise in DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB, WBSEDCL tenders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --purple-dark: #4A2C6D;
+            --purple-medium: #6B46C1;
+            --purple-light: #9F7AEA;
+            --yellow-primary: #F6E05E;
+            --yellow-dark: #D69E2E;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #495057;
+            --shadow: rgba(74, 44, 109, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--purple-dark);
+            line-height: 1.3;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 20px var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--purple-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--yellow-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple-medium);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--purple-dark);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 100%);
+            padding: 140px 3rem 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--yellow-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0 2.5rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--yellow-primary);
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .hero-image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .profile-frame {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-photo {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid var(--yellow-primary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo-decoration {
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            border: 2px solid var(--yellow-primary);
+            border-radius: 20px;
+            top: 15px;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--yellow-primary);
+            color: var(--purple-dark);
+            box-shadow: 0 4px 15px rgba(246, 224, 94, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #e2c94c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(246, 224, 94, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--purple-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 3rem;
+        }
+
+        .section-light {
+            background: var(--white);
+        }
+
+        .section-gray {
+            background: var(--light-gray);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            color: var(--purple-medium);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--purple-dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-description {
+            font-size: 1.15rem;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--yellow-primary);
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--purple-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .competency-card {
+            background: var(--white);
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--purple-medium);
+        }
+
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+            border-top-color: var(--yellow-primary);
+        }
+
+        .competency-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .competency-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--purple-dark);
+        }
+
+        .competency-card p {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Experience Timeline */
+        .timeline-container {
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--yellow-primary), var(--purple-medium));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            padding: 2.5rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4.75rem;
+            top: 2.5rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--yellow-primary);
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 3px var(--yellow-primary);
+            z-index: 2;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--yellow-primary);
+            color: var(--purple-dark);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.2rem;
+            color: var(--purple-medium);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-description li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .timeline-description li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--yellow-primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio/Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: all 0.4s ease;
+            border-top: 4px solid var(--purple-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--yellow-primary), var(--purple-medium));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px var(--shadow);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--purple-dark);
+        }
+
+        .project-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--yellow-primary);
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+
+        .project-card p {
+            color: var(--dark-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-metrics {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+
+        .metric-item {
+            flex: 1;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--purple-dark);
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            margin-top: 0.3rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .skill-category h3 {
+            color: var(--purple-dark);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-category h3::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: var(--yellow-primary);
+            border-radius: 2px;
+        }
+
+        .skill-item {
+            margin-bottom: 2rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--purple-dark);
+            font-size: 1.05rem;
+        }
+
+        .skill-level {
+            color: var(--purple-medium);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: var(--medium-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--yellow-primary), var(--purple-medium));
+            border-radius: 10px;
+            transition: width 1s ease-out;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            border-left: 4px solid var(--yellow-primary);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .cert-badge {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--yellow-primary), var(--purple-medium));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-card h4 {
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .cert-issuer {
+            color: var(--purple-medium);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px var(--shadow);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            color: var(--yellow-primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--medium-gray);
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--yellow-primary), var(--purple-medium));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .author-info h5 {
+            color: var(--purple-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--purple-medium);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: var(--purple-dark);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--yellow-primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--yellow-primary);
+            min-width: 30px;
+        }
+
+        .contact-details h4 {
+            color: var(--yellow-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-details p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--yellow-primary);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--yellow-primary);
+            box-shadow: 0 0 0 3px rgba(246, 224, 94, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--purple-dark);
+            color: var(--white);
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--yellow-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--yellow-primary);
+            color: var(--purple-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Personal Profile Section */
+        .personal-profile {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            margin-top: 2rem;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .profile-label {
+            font-weight: 600;
+            color: var(--purple-dark);
+        }
+
+        .profile-value {
+            color: var(--dark-gray);
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            border-left: 4px solid var(--yellow-primary);
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .education-card h4 {
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .education-institution {
+            color: var(--purple-medium);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image-container {
+                order: -1;
+            }
+
+            .hero-description {
+                margin: 0 auto 2.5rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px var(--shadow);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-photo {
+                width: 240px;
+                height: 240px;
+            }
+
+            .photo-decoration {
+                width: 260px;
+                height: 260px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .competencies-grid,
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            nav {
+                padding: 1.2rem 2rem;
+            }
+
+            section {
+                padding: 70px 2rem;
+            }
+
+            .timeline-container {
+                padding-left: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .photo-decoration {
+                width: 220px;
+                height: 220px;
+                top: 10px;
+                left: 10px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .projects-grid,
+            .testimonials-grid,
+            .certifications-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">Janmejay Vashisht</div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#education" onclick="closeMenu()">Education</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <h1>Janmejay Vashisht</h1>
+                <div class="hero-subtitle">Senior Tender Executive</div>
+                <p class="hero-description">
+                    Dedicated professional with over 20 years of comprehensive experience in tender management, documentation, and government liaising. Expertise in handling DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB, and other government department tenders.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Major PSUs</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Compliance</div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://wa.me/918287903077" class="btn btn-primary" target="_blank">Connect on WhatsApp</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+
+            <div class="hero-image-container fade-in">
+                <div class="profile-frame">
+                    <!-- Placeholder for profile photo -->
+                    <div class="profile-photo" style="background: var(--purple-medium); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                        Professional Photo
+                    </div>
+                    <div class="photo-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Professional Profile</div>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    A dedicated tender management professional with comprehensive expertise in documentation, e-procurement, and government liaising
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>
+                        My career journey began in 2003 as a computer operator, and through dedication and continuous learning, I have advanced to senior roles specializing in tender management and documentation.
+                    </p>
+                    <p>
+                        Over the past 20 years, I have developed deep expertise in navigating complex government procurement processes, managing documentation for various tenders, and maintaining strict compliance with regulatory requirements.
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <h4>Career Objective</h4>
+                        <p>To obtain a challenging and responsible position in an organization where I can contribute to successful growth using my abilities and knowledge. I firmly believe that "There is always a better way of doing things."</p>
+                    </div>
+
+                    <p>
+                        My approach combines meticulous attention to detail with strategic thinking, ensuring that every tender submission meets the highest standards of quality and compliance while maximizing the probability of success.
+                    </p>
+                </div>
+
+                <div class="competencies-grid">
+                    <div class="competency-card">
+                        <div class="competency-icon">📋</div>
+                        <h4>Tender Documentation</h4>
+                        <p>Expert preparation of comprehensive technical and commercial bids with full regulatory compliance</p>
+                    </div>
+
+                    <div class="competency-card">
+                        <div class="competency-icon">💻</div>
+                        <h4>Computer Operations</h4>
+                        <p>Proficient in computer operations with 35-40 WPM typing speed in English</p>
+                    </div>
+
+                    <div class="competency-card">
+                        <div class="competency-icon">🤝</div>
+                        <h4>Government Liaison</h4>
+                        <p>Extensive experience in PSU coordination and department interactions</p>
+                    </div>
+
+                    <div class="competency-card">
+                        <div class="competency-icon">📊</div>
+                        <h4>Letter Drafting</h4>
+                        <p>Expert in drafting professional letters and tender-related correspondence</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Profile Section -->
+            <div class="personal-profile">
+                <h3 style="margin-bottom: 1.5rem; color: var(--purple-dark);">Personal Profile</h3>
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <span class="profile-label">Date of Birth</span>
+                        <span class="profile-value">19 June 1981</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Father's Name</span>
+                        <span class="profile-value">Shri Sudharshan Krishan Vashisht</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Nationality</span>
+                        <span class="profile-value">Indian</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Languages Known</span>
+                        <span class="profile-value">English, Hindi</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Marital Status</span>
+                        <span class="profile-value">Married</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Address</span>
+                        <span class="profile-value">H. No. 280, Prahaladpur Bangar, Delhi-110042</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Career Journey</div>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">
+                    Over two decades of progressive growth in tender management across leading cable manufacturers
+                </p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2021 – December 2024</div>
+                    <h3 class="timeline-title">Tender Executive & Office Coordinator</h3>
+                    <div class="timeline-company">Suraj Cables (Brand "SURAJ")</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Managed end-to-end tendering process from identification to submission</li>
+                            <li>Handled tender queries and coordinated with various departments</li>
+                            <li>Prepared comprehensive tender documents with 100% compliance</li>
+                            <li>Coordinated office administration and interdepartmental communication</li>
+                            <li>Maintained tender databases and tracking systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2019 – March 2021</div>
+                    <h3 class="timeline-title">Tender Executive & Office Coordinator</h3>
+                    <div class="timeline-company">Shree Bhagwati Cables (Brand "SECTORREX")</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Managed vendor registration processes and regulatory documentation</li>
+                            <li>Ensured policy compliance across all tender submissions</li>
+                            <li>Handled tender queries and provided timely responses</li>
+                            <li>Coordinated office administration and maintained communication channels</li>
+                            <li>Developed standardized templates for improved efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2005 – September 2017 (13 Years)</div>
+                    <h3 class="timeline-title">Tender Executive</h3>
+                    <div class="timeline-company">Vijaya Cables Pvt. Ltd. (Brand "OSCAR")</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Prepared comprehensive tender documents including technical and commercial aspects</li>
+                            <li>Handled tender queries from various government departments and PSUs</li>
+                            <li>Managed documentation for DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB, WBSEDCL tenders</li>
+                            <li>Ensured strict compliance with all tender specifications and requirements</li>
+                            <li>Developed expertise in online and offline tender processes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2003 - 2005</div>
+                    <h3 class="timeline-title">Computer Operator</h3>
+                    <div class="timeline-company">Private Library</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Managed data entry and documentation</li>
+                            <li>Developed foundational computer operation skills</li>
+                            <li>Assisted in maintaining library records and systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Qualifications</div>
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-description">
+                    Academic foundation and professional development
+                </p>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <h4>Graduation</h4>
+                    <div class="education-institution">Shobhit University, Meerut</div>
+                    <div class="education-details">Bachelor's Degree</div>
+                </div>
+
+                <div class="education-card">
+                    <h4>Senior Secondary (12th)</h4>
+                    <div class="education-institution">CBSE, Delhi</div>
+                    <div class="education-details">Completed</div>
+                </div>
+
+                <div class="education-card">
+                    <h4>Secondary (10th)</h4>
+                    <div class="education-institution">CBSE, Delhi</div>
+                    <div class="education-details">Completed</div>
+                </div>
+
+                <div class="education-card">
+                    <h4>Diploma in Computer Application</h4>
+                    <div class="education-institution">Six Month Program</div>
+                    <div class="education-details">Professional Certification</div>
+                </div>
+            </div>
+
+            <div class="certifications-grid" style="margin-top: 3rem;">
+                <div class="cert-card">
+                    <div class="cert-badge">💻</div>
+                    <h4>Computer Operations</h4>
+                    <div class="cert-issuer">Professional Skills</div>
+                    <p class="cert-date">Typing Speed: 35-40 WPM (English)</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">📝</div>
+                    <h4>Hindi Typing</h4>
+                    <div class="cert-issuer">Working Knowledge</div>
+                    <p class="cert-date">Professional Skill</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">📋</div>
+                    <h4>Tender Management</h4>
+                    <div class="cert-issuer">20+ Years Experience</div>
+                    <p class="cert-date">Continuous Professional Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Skills & Proficiencies</h2>
+                <p class="section-description">
+                    Comprehensive skill set developed through 20+ years of specialized experience
+                </p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Tender Management</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Tender Documentation</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Online & Offline Tenders</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Government Department Tenders</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Compliance Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 93%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Computer Operations</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">English Typing (35-40 WPM)</span>
+                            <span class="skill-level">Proficient</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Hindi Typing</span>
+                            <span class="skill-level">Working Knowledge</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Letter Drafting</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Professional Capabilities</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Office Coordination</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Query Handling</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Document Management</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 87%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Interdepartmental Coordination</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Industry Knowledge</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Cable Industry</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Government Procurement</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">PSU Tender Processes</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Regulatory Compliance</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Let's Connect</div>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Available for tender management positions and professional collaborations
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Mobile</h4>
+                            <p><a href="tel:+918287903077">+91 82879 03077</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/918287903077" target="_blank">Chat on WhatsApp</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:janmejay_jyoti@yahoo.com">janmejay_jyoti@yahoo.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>H. NO. 280, PRAHALADPUR BANGAR<br>DELHI-110042</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Janmejay Vashisht</div>
+            <p class="footer-text">
+                Senior Tender Executive with 20+ years of excellence in the cable manufacturing industry. 
+                Specializing in government tenders, documentation, and e-procurement management.
+            </p>
+            
+            <div class="social-links">
+                <a href="https://wa.me/918287903077" class="social-link" target="_blank" aria-label="WhatsApp">💬</a>
+                <a href="mailto:janmejay_jyoti@yahoo.com" class="social-link" aria-label="Email">📧</a>
+                <a href="tel:+918287903077" class="social-link" aria-label="Phone">📱</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Janmejay Vashisht. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
