@@ -3,1714 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janmejay Vashisht | Senior Tender Manager - Electrical Cables & GEM Portal Expert</title>
-    <meta name="description" content="Janmejay Vashisht - 20+ Years Experienced Senior Tender Manager specializing in Electrical Cables & GEM Portal. 95% Success Rate in Government Tenders">
-    <meta name="keywords" content="Tender Manager, Electrical Cables, GEM Portal, Government Tenders, Cable Manufacturing, DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB, VIZAG, WBSEDCL">
-    <meta name="author" content="Janmejay Vashisht">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Janmejay Vashisht | Senior Tender Manager - Electrical Cables & GEM Portal Expert">
-    <meta property="og:description" content="20+ Years Expertise in Electrical Cable Tender Management | GEM Portal Specialist | 95% Success Rate">
-    <meta property="og:type" content="website">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Janmejay Vashisht - Senior Tender Manager Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         :root {
-            --primary-blue: #0a2463;
-            --dark-blue: #061a44;
-            --navy-blue: #1a3a8a;
-            --gold: #d4af37;
-            --light-gold: #f4e4a6;
-            --white: #ffffff;
-            --light-gray: #f8f9fa;
-            --medium-gray: #e9ecef;
-            --dark-gray: #6c757d;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.2);
-            --transition: all 0.4s ease;
-            --border-radius: 15px;
-            --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
-            --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+            --primary: #1e40af;
+            --secondary: #7e22ce;
+            --accent: #0ea5e9;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background-color: var(--white);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: var(--text);
             overflow-x: hidden;
         }
-
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1rem;
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
         }
-
-        section {
-            padding: 100px 0;
-        }
-
+        
         .section-title {
-            text-align: center;
-            margin-bottom: 60px;
             position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             display: inline-block;
+            margin-bottom: 3rem;
         }
-
-        .section-title h2:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary-blue), var(--gold));
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--dark-gray);
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            background: var(--gradient-primary);
-            color: var(--white);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn:before {
+        
+        .section-title:after {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .btn:hover:before {
-            left: 100%;
-        }
-
-        .btn-gold {
-            background: var(--gradient-gold);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary-blue);
-            color: var(--primary-blue);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-
-        /* Header Styles - Improved with floating elements */
-        header {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 120px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header:before {
-            content: '';
-            position: absolute;
-            top: 0;
+            bottom: -10px;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
-            opacity: 0.1;
-        }
-
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .shape {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 15s infinite linear;
-        }
-
-        .shape:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .shape:nth-child(2) {
-            width: 120px;
-            height: 120px;
-            top: 20%;
-            right: 15%;
-            animation-delay: 2s;
-            animation-duration: 20s;
-        }
-
-        .shape:nth-child(3) {
             width: 60px;
-            height: 60px;
-            bottom: 30%;
-            left: 15%;
-            animation-delay: 4s;
-            animation-duration: 18s;
-        }
-
-        .shape:nth-child(4) {
-            width: 100px;
-            height: 100px;
-            bottom: 20%;
-            right: 10%;
-            animation-delay: 6s;
-            animation-duration: 22s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
-
-        .header-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 6px solid var(--gold);
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            box-shadow: var(--shadow-dark);
-            background: var(--white);
-            position: relative;
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-text {
-            text-align: center;
-        }
-
-        .profile-text h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, var(--white) 0%, var(--light-gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .profile-text h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--gold);
-            font-weight: 500;
-        }
-
-        .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-3px);
-        }
-
-        .contact-btn i {
-            font-size: 1.2rem;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
-            min-width: 200px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: var(--transition);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--gold);
-        }
-
-        .stat-text {
-            font-size: 1.1rem;
-        }
-
-        /* About Section */
-        .about {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .highlight {
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        /* NEW: Dashboard Section */
-        .dashboard {
-            background: var(--white);
-            padding: 80px 0;
-        }
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .dashboard-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border-top: 4px solid var(--primary-blue);
-        }
-
-        .dashboard-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .dashboard-card.gold {
-            border-top-color: var(--gold);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .card-header h3 {
-            color: var(--primary-blue);
-            margin-bottom: 0;
-            font-size: 1.3rem;
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.5rem;
-        }
-
-        .card-icon.gold {
-            background: var(--gradient-gold);
-        }
-
-        .chart-container {
-            height: 250px;
-            position: relative;
-        }
-
-        /* Experience Section */
-        .experience {
-            background: var(--white);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, var(--primary-blue), var(--gold));
-            transform: translateX(-50%);
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             border-radius: 2px;
         }
-
-        .timeline-item {
-            margin-bottom: 70px;
-            position: relative;
-            width: 100%;
+        
+        .skill-bar {
+            transition: all 0.5s ease;
         }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            padding-left: 70px;
+        
+        .skill-progress {
+            transition: width 1.5s ease-in-out;
         }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: auto;
-            padding-right: 70px;
-            text-align: right;
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .timeline-content {
-            width: 45%;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-            border-left: 5px solid var(--primary-blue);
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            border-left: none;
-            border-right: 5px solid var(--gold);
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .timeline-content:before {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background: var(--gold);
-            border-radius: 50%;
-            top: 30px;
-            box-shadow: 0 0 0 5px white, 0 0 0 10px var(--gold);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content:before {
-            left: -12px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content:before {
-            right: -12px;
-        }
-
-        .timeline-content h3 {
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-            font-size: 1.5rem;
-        }
-
-        .timeline-content h4 {
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .timeline-content ul {
-            list-style-type: none;
-        }
-
-        .timeline-content li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .timeline-content li:before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: var(--gold);
+        
+        .typed-cursor {
+            color: var(--primary);
             font-weight: bold;
         }
-
-        .timeline-item:nth-child(even) .timeline-content li {
-            padding-left: 0;
-            padding-right: 25px;
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
-
-        .timeline-item:nth-child(even) .timeline-content li:before {
-            left: auto;
-            right: 0;
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
         }
-
-        /* NEW: GEM Portal Expertise Section */
-        .gem-expertise {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
         }
-
-        .gem-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            align-items: center;
-            justify-content: center;
+        
+        .pulse-slow {
+            animation: pulse 4s ease-in-out infinite;
         }
-
-        .gem-visual {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
-
-        .gem-icon {
-            font-size: 150px;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-
-        .gem-details {
-            flex: 1;
-            min-width: 300px;
+        
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(30, 64, 175, 0.3);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+            mix-blend-mode: difference;
         }
-
-        .gem-details h3 {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
+        
+        .cursor-hover {
+            width: 40px;
+            height: 40px;
+            background: rgba(30, 64, 175, 0.5);
         }
-
-        .gem-details p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .gem-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .gem-feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .gem-feature i {
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-
-        /* Cable Manufacturing Expertise */
-        .cable-expertise {
-            background: var(--white);
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .expertise-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        
+        .three-container {
+            width: 100%;
+            height: 400px;
             position: relative;
             overflow: hidden;
+            border-radius: 12px;
         }
-
-        .expertise-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        .globe-container {
             width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-blue), var(--gold));
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .expertise-icon {
-            font-size: 50px;
-            color: var(--primary-blue);
-            margin-bottom: 25px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .expertise-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .expertise-card p {
-            color: var(--dark-gray);
-            line-height: 1.6;
-        }
-
-        /* NEW: Tender Analytics Section */
-        .analytics {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
-        }
-
-        .analytics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .analytics-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .analytics-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .analytics-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.3rem;
-        }
-
-        /* Department Expertise */
-        .departments {
-            background: var(--white);
-        }
-
-        .departments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .department-card {
-            background: white;
-            padding: 25px 15px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border-top: 3px solid var(--primary-blue);
-        }
-
-        .department-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .department-icon {
-            font-size: 40px;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-        }
-
-        .department-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.1rem;
-        }
-
-        /* NEW: Success Stories Section */
-        .success-stories {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
-            padding: 100px 0;
-        }
-
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .story-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border-left: 5px solid var(--gold);
-        }
-
-        .story-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .story-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .story-card p {
-            color: var(--dark-gray);
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .story-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
-
-        /* NEW: Testimonials Section */
-        .testimonials {
-            background: var(--white);
-            padding: 100px 0;
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
+            height: 500px;
             position: relative;
+            overflow: hidden;
+            border-radius: 12px;
         }
-
-        .testimonial-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            margin: 20px;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--dark-gray);
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-
-        .testimonial-role {
-            color: var(--gold);
-            font-size: 0.9rem;
-        }
-
-        /* NEW: Contact Form Section */
-        .contact-form-section {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
-            padding: 100px 0;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--primary-blue);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        
+        .spline-container {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--medium-gray);
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
         }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* NEW: Interactive Cards */
-        .interactive-card {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .interactive-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* NEW: Animation Classes */
-        .fade-in-up {
+        
+        .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-
-        .fade-in-up.visible {
+        
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* NEW: Enhanced GEM Portal Section */
-        .gem-process {
-            background: var(--white);
-            padding: 100px 0;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .process-step {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .process-step:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-gold);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-
-        .process-step h3 {
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .process-step p {
-            color: var(--dark-gray);
-            line-height: 1.6;
-        }
-
-        /* NEW: Professional Services Section */
-        .professional-services {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
-            padding: 100px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border-top: 4px solid var(--primary-blue);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .service-icon {
-            font-size: 50px;
-            color: var(--primary-blue);
-            margin-bottom: 25px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .service-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            color: var(--dark-gray);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        /* NEW: Certificate Section */
-        .certificates {
-            background: var(--white);
-            padding: 100px 0;
-        }
-
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .certificate-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-dark);
-        }
-
-        .certificate-icon {
-            font-size: 50px;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
-
-        .certificate-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .certificate-card p {
-            color: var(--dark-gray);
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-blue);
-            color: var(--white);
-            padding: 70px 0 30px;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-            text-align: left;
-        }
-
-        .footer-column h3 {
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .footer-column p {
-            margin-bottom: 15px;
-            opacity: 0.8;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-
-        .footer-column ul li a:hover {
-            opacity: 1;
-            color: var(--gold);
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 20px;
-            transition: var(--transition);
-        }
-
-        .social-icon:hover {
-            background: var(--gold);
-            color: var(--dark-blue);
-            transform: translateY(-5px);
-        }
-
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background: #25D366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            transition: var(--transition);
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(10, 36, 99, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 15px 0;
-            transition: var(--transition);
-        }
-
-        .navbar.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--gold);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-link {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover {
-            color: var(--gold);
-        }
-
-        .nav-link:hover:after {
-            width: 100%;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            background: var(--white);
-            transition: var(--transition);
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--gold);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            transition: var(--transition);
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary-blue);
-            transform: translateY(-5px);
-        }
-
-        /* NEW: Download Button */
-        .download-btn {
-            background: var(--gradient-gold);
-            margin-top: 20px;
-        }
-
-        /* NEW: Real-time Stats Counter */
-        .counter {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--gold);
-        }
-
-        /* NEW: Live Chat Button */
-        .live-chat-btn {
-            position: fixed;
-            bottom: 110px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
-            background: var(--primary-blue);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        .live-chat-btn:hover {
-            transform: scale(1.1);
-            background: var(--navy-blue);
-        }
-
-        /* NEW: Accessibility Improvements */
-        *:focus {
-            outline: 2px solid var(--gold);
-            outline-offset: 2px;
-        }
-
-        /* High Contrast Mode */
-        @media (prefers-contrast: high) {
-            :root {
-                --primary-blue: #000080;
-                --gold: #FFD700;
-            }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 992px) {
-            .profile-text h1 {
-                font-size: 3rem;
-            }
-            
-            .profile-text h2 {
-                font-size: 1.6rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2.5rem;
-            }
-
-            .nav-menu {
-                gap: 20px;
-            }
-
-            .gem-features {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 15px 0;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                gap: 0;
-                flex-direction: column;
-                background: rgba(10, 36, 99, 0.95);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding: 20px 0;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-item {
-                margin: 15px 0;
-            }
-
-            .profile-text h1 {
-                font-size: 2.5rem;
-            }
-            
-            .profile-text h2 {
-                font-size: 1.4rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-            
-            .timeline:before {
-                left: 20px;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                width: calc(100% - 70px);
-                margin-left: 70px;
-                padding-left: 30px;
-                text-align: left;
-            }
-            
-            .timeline-content:before {
-                left: -40px !important;
-            }
-            
-            .timeline-item:nth-child(even) .timeline-content {
-                border-right: none;
-                border-left: 5px solid var(--gold);
-            }
-            
-            .timeline-item:nth-child(even) .timeline-content li {
-                padding-right: 0;
-                padding-left: 25px;
-            }
-            
-            .timeline-item:nth-child(even) .timeline-content li:before {
-                right: auto;
-                left: 0;
-            }
-            
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .contact-btn {
-                width: 250px;
-                justify-content: center;
-            }
-            
-            .stats-container {
-                gap: 20px;
-            }
-            
-            .stat-item {
-                min-width: 160px;
-                padding: 20px;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .gem-content {
-                flex-direction: column;
-            }
-
-            .live-chat-btn {
-                bottom: 100px;
-                left: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-text h1 {
-                font-size: 2.2rem;
-            }
-            
-            .profile-text h2 {
-                font-size: 1.2rem;
-            }
-            
-            .tagline {
-                font-size: 1rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .profile-img {
-                width: 180px;
-                height: 180px;
-            }
-            
-            section {
-                padding: 70px 0;
-            }
-            
-            .stat-item {
-                min-width: 140px;
-                padding: 15px;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .stat-text {
-                font-size: 1rem;
-            }
-
-            .dashboard-grid,
-            .analytics-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gem-icon {
-                font-size: 120px;
-            }
-
-            .form-container {
-                padding: 20px;
-            }
+        
+        .nav-active {
+            color: var(--primary);
+            font-weight: 600;
         }
     </style>
 </head>
-<body>
+<body class="smooth-scroll">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Janmejay <span>Vashisht</span></a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#dashboard" class="nav-link">Dashboard</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                <li class="nav-item"><a href="#gem" class="nav-link">GEM Expertise</a></li>
-                <li class="nav-item"><a href="#process" class="nav-link">GEM Process</a></li>
-                <li class="nav-item"><a href="#cable" class="nav-link">Cable Expertise</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#success" class="nav-link">Success Stories</a></li>
-                <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
-                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg flex items-center justify-center font-bold text-xl text-white">
+                        JV
+                    </div>
+                    <span class="font-bold text-xl text-gray-800">Janmejay Vashisht</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8" id="navLinks">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Experience</a>
+                    <a href="#expertise" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Expertise</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Projects</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Services</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Contact</a>
+                </div>
+
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-effect mt-4 rounded-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">About</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Experience</a>
+                <a href="#expertise" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Expertise</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Projects</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/918287903077" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- NEW: Live Chat Button -->
-    <button class="live-chat-btn" id="liveChatBtn">
-        <i class="fas fa-comments"></i>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
     </button>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-
-    <!-- Header Section -->
-    <header id="home">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-container">
-                    <div class="profile-img">
-                        <img src="janmejay.jpg" alt="Janmejay Vashisht" loading="lazy">
-                    </div>
-                    <div class="profile-text">
-                        <h1>Janmejay Vashisht</h1>
-                        <h2>Senior Tender Manager - Electrical Cables & GEM Portal Expert</h2>
-                        <p class="tagline">20+ Years Expertise in Electrical Cable Tender Management | GEM Portal Specialist | Proven Track Record with 95% Success Rate</p>
-                        
-                        <div class="contact-buttons">
-                            <a href="https://wa.me/918287903077" class="contact-btn" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>WhatsApp</span>
-                            </a>
-                            <a href="mailto:janmejay_jyoti@yahoo.com" class="contact-btn">
-                                <i class="fas fa-envelope"></i>
-                                <span>Email</span>
-                            </a>
-                            <a href="tel:918287903077" class="contact-btn">
-                                <i class="fas fa-phone"></i>
-                                <span>Call Now</span>
-                            </a>
-                            <a href="janmejay cv (2).pdf" class="contact-btn" download>
-                                <i class="fas fa-download"></i>
-                                <span>Download Resume</span>
-                            </a>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 relative z-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 fade-in">
+                <div class="inline-block px-4 py-2 glass-effect rounded-full text-blue-600 text-sm font-semibold">
+                    ✨ 20+ Years of Excellence
                 </div>
-                
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <div class="stat-number counter" data-target="20">0</div>
-                        <div class="stat-text">Years Experience</div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-gray-800">
+                    Senior Tender
+                    <span class="block gradient-text">
+                        Management Expert
+                    </span>
+                </h1>
+                <div class="h-12">
+                    <span id="typed-text" class="text-xl text-gray-600"></span>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg font-semibold text-white hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center space-x-2">
+                        <span>Get In Touch</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <button onclick="downloadResume()" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        <span>Download Resume</span>
+                    </button>
+                </div>
+                <div class="flex space-x-8 text-gray-600">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gray-800" id="counter1">0</div>
+                        <div class="text-sm">Years Experience</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number counter" data-target="95">0</div>
-                        <div class="stat-text">Success Rate</div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gray-800" id="counter2">0</div>
+                        <div class="text-sm">Tenders Managed</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number counter" data-target="1000">0</div>
-                        <div class="stat-text">Tenders Managed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number counter" data-target="50">0</div>
-                        <div class="stat-text">Govt Departments</div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gray-800" id="counter3">0</div>
+                        <div class="text-sm">Success Rate</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Dashboard Section -->
-    <section class="dashboard" id="dashboard">
-        <div class="container">
-            <div class="section-title">
-                <h2>Performance Dashboard</h2>
-            </div>
-            <div class="dashboard-grid">
-                <div class="dashboard-card interactive-card">
-                    <div class="card-header">
-                        <h3>Success Rate Analytics</h3>
-                        <div class="card-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="successChart"></canvas>
-                    </div>
-                </div>
-                <div class="dashboard-card gold interactive-card">
-                    <div class="card-header">
-                        <h3>Tender Volume Trend</h3>
-                        <div class="card-icon gold">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="volumeChart"></canvas>
-                    </div>
-                </div>
-                <div class="dashboard-card interactive-card">
-                    <div class="card-header">
-                        <h3>Department Distribution</h3>
-                        <div class="card-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="departmentChart"></canvas>
-                    </div>
-                </div>
-                <div class="dashboard-card gold interactive-card">
-                    <div class="card-header">
-                        <h3>Value Analysis</h3>
-                        <div class="card-icon gold">
-                            <i class="fas fa-rupee-sign"></i>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="valueChart"></canvas>
+            
+            <div class="relative floating">
+                <div class="three-container glass-effect flex items-center justify-center">
+                    <div class="text-center space-y-4 p-8">
+                        <div class="text-6xl font-bold gradient-text mb-4">JV</div>
+                        <h3 class="text-2xl font-bold text-gray-800">3D Animation Placeholder</h3>
+                        <p class="text-gray-600">Three.js 3D text animation would render here</p>
                     </div>
                 </div>
             </div>
@@ -1718,903 +294,893 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
+    <section id="about" class="py-20 px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">About Me</h2>
+                <p class="text-gray-600 text-lg">Dedicated Professional with Proven Track Record</p>
             </div>
-            <div class="about-content">
-                <p>With over <span class="highlight">20 years of specialized experience</span> in electrical cable tender management, I have established myself as a leading expert in securing government contracts for cable manufacturers.</p>
-                <p>My expertise spans across major cable brands including <span class="highlight">OSCAR, SECTORREX, SURAJ, and Hyphen Cables</span>, with a proven track record of managing <span class="highlight">1000+ tenders</span> and maintaining an exceptional <span class="highlight">95% success rate</span>.</p>
-                <p>I specialize in navigating complex tender processes for departments like <span class="highlight">DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB, VIZAG, WBSEDCL</span> and many more, ensuring optimal success rates and profitable outcomes.</p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="glass-effect p-8 rounded-2xl card-hover">
+                        <div class="text-5xl mb-4">💡</div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Professional Summary</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Result-oriented professional with over 20 years of specialized experience in tender management, 
+                            documentation, and coordination within leading cable manufacturing companies. Expert in handling 
+                            both online and offline government tenders, with deep knowledge of GEM portal, CPPP, and various 
+                            state procurement systems.
+                        </p>
+                    </div>
+
+                    <div class="glass-effect p-8 rounded-2xl card-hover">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center space-x-2 text-gray-800">
+                            <span>🎓</span>
+                            <span>Education & Certifications</span>
+                        </h3>
+                        <div class="space-y-3 text-gray-600 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-blue-600">✓</span>
+                                <span>Graduation - Shobhit University, Meerut</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-blue-600">✓</span>
+                                <span>12th & 10th - CBSE, Delhi</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-blue-600">✓</span>
+                                <span>Diploma in Computer Applications</span>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <h4 class="font-semibold mb-3 text-gray-800">Professional Certifications:</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-blue-600">Procurement Specialist</div>
+                                    <div class="text-xs text-gray-500">IIPA - 2023</div>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-blue-600">GEM Portal Expert</div>
+                                    <div class="text-xs text-gray-500">GeM - 2022</div>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-blue-600">Tender Management</div>
+                                    <div class="text-xs text-gray-500">NISG - 2021</div>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-blue-600">Public Procurement</div>
+                                    <div class="text-xs text-gray-500">UNDP - 2020</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-effect p-8 rounded-2xl card-hover">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Core Skills</h3>
+                        <div class="space-y-5">
+                            <div class="skill-bar" data-skill="95">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">📄 Tender Management</span>
+                                    <span class="text-blue-600 font-semibold">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar" data-skill="98">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">🛡️ GEM Portal & E-Procurement</span>
+                                    <span class="text-blue-600 font-semibold">98%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar" data-skill="90">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">🧮 Cost Estimation & Analysis</span>
+                                    <span class="text-blue-600 font-semibold">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar" data-skill="95">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">✅ Documentation & Compliance</span>
+                                    <span class="text-blue-600 font-semibold">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar" data-skill="92">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">👥 Vendor Registration</span>
+                                    <span class="text-blue-600 font-semibold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar" data-skill="88">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">📊 MIS & Reporting</span>
+                                    <span class="text-blue-600 font-semibold">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-effect p-8 rounded-2xl card-hover">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                                <span>📞</span>
+                                <span>+91 8287903077</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                                <span>✉️</span>
+                                <span class="break-all">janmejay_jyoti@yahoo.com</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                                <span>📍</span>
+                                <span>Delhi - 110042, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Professional Experience</h2>
+    <section id="experience" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Professional Journey</h2>
+                <p class="text-gray-600 text-lg">Two Decades of Excellence in Tender Management</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content interactive-card">
-                        <h3>Senior Tender Manager</h3>
-                        <h4>Hyphen Cables Pvt Ltd | Jun 2025 – Present</h4>
-                        <ul>
-                            <li>Leading tender operations for premium electrical cable manufacturing</li>
-                            <li>Developing strategic bidding approaches for government contracts</li>
-                            <li>Managing end-to-end tender processes with enhanced efficiency</li>
-                            <li>Implementing advanced tender tracking and management systems</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content interactive-card">
-                        <h3>Tender Executive & Office Coordinator</h3>
-                        <h4>Suraj Cables (SURAJ Brand) | Jun 2021 – Dec 2024</h4>
-                        <ul>
-                            <li>Managed complete tender lifecycle for SURAJ electrical cable brand</li>
-                            <li>Coordinated office operations alongside tender management</li>
-                            <li>Handled complex tender documentation and compliance requirements</li>
-                            <li>Achieved consistent success in competitive bidding processes</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content interactive-card">
-                        <h3>Tender Executive & Office Coordinator</h3>
-                        <h4>Shree Bhagwati Cables (SECTORREX Brand) | Jan 2019 – Mar 2021</h4>
-                        <ul>
-                            <li>Managed tender operations for SECTORREX electrical cable products</li>
-                            <li>Handled tender queries and customer coordination</li>
-                            <li>Streamlined office coordination with tender management</li>
-                            <li>Built strong relationships with government departments</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content interactive-card">
-                        <h3>Tender Executive</h3>
-                        <h4>Vijaya Cables (OSCAR Brand) | Jan 2005 – Sep 2017</h4>
-                        <ul>
-                            <li>Built foundation in electrical cable tender management over 12+ years</li>
-                            <li>Specialized in OSCAR brand cable tenders</li>
-                            <li>Managed tender queries and documentation</li>
-                            <li>Developed expertise in government tender processes</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+            <div class="space-y-8" id="experienceContainer"></div>
         </div>
     </section>
 
-    <!-- NEW: GEM Portal Expertise Section -->
-    <section class="gem-expertise" id="gem">
-        <div class="container">
-            <div class="section-title">
-                <h2>GEM Portal Expertise</h2>
+    <!-- GEM Portal Expertise -->
+    <section id="expertise" class="py-20 px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">GEM Portal Expertise</h2>
+                <p class="text-gray-600 text-lg">Mastering Government e-Marketplace for Optimal Results</p>
             </div>
-            <div class="gem-content">
-                <div class="gem-visual">
-                    <div class="gem-icon">
-                        <i class="fas fa-laptop-house"></i>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div class="glass-effect p-8 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-4xl">
+                        ⚡
                     </div>
-                    <h3>Government e-Marketplace</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">What is GEM Portal?</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Government e-Marketplace (GeM) is a one-stop national procurement portal launched by the Government 
+                        of India to facilitate online procurement of common use goods and services required by various 
+                        government departments, organizations, and PSUs.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        It brings transparency, efficiency, and speed in public procurement, making it mandatory for 
+                        government agencies to procure goods and services through this digital platform.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Transparent</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Efficient</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Digital</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Nationwide</span>
+                    </div>
                 </div>
-                <div class="gem-details">
-                    <h3>Mastery in GEM Portal Operations</h3>
-                    <p>With extensive hands-on experience in the Government e-Marketplace (GEM) portal, I have successfully managed hundreds of tenders through this platform, ensuring compliance with all government regulations and requirements.</p>
-                    <p>My expertise includes end-to-end management of GEM tender processes, from identification and submission to tracking and contract finalization. I have in-depth knowledge of GEM portal functionalities, bidding processes, and compliance requirements.</p>
-                    
-                    <div class="gem-features">
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>End-to-End GEM Tender Management</span>
+
+                <div class="glass-effect p-8 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-4xl">
+                        🎯
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Why I Excel at GEM?</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                            <span class="text-blue-600">✓</span>
+                            <span>Deep understanding of portal navigation and functionalities</span>
                         </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Vendor Registration & Management</span>
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                            <span class="text-blue-600">✓</span>
+                            <span>Expert in creating competitive bids with optimal pricing strategies</span>
                         </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Bid Submission & Tracking</span>
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                            <span class="text-blue-600">✓</span>
+                            <span>Proficient in handling technical glitches and portal updates</span>
                         </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Compliance & Documentation</span>
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                            <span class="text-blue-600">✓</span>
+                            <span>Experienced in vendor registration and product catalogue management</span>
                         </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Price Benchmarking & Analysis</span>
-                        </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Contract Finalization</span>
-                        </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Payment Processing</span>
-                        </div>
-                        <div class="gem-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Vendor Performance Management</span>
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                            <span class="text-blue-600">✓</span>
+                            <span>Track record of winning high-value government contracts</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- NEW: GEM Process Section -->
-    <section class="gem-process" id="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>GEM Portal Tender Process</h2>
+            <div class="glass-effect p-8 rounded-2xl mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Why I Love Working with GEM</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
+                        <div class="text-5xl mb-4">🛡️</div>
+                        <h4 class="font-bold mb-2 text-lg text-gray-800">Transparency</h4>
+                        <p class="text-sm text-gray-600">Level playing field with clear guidelines and fair competition for all vendors</p>
+                    </div>
+                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
+                        <div class="text-5xl mb-4">⚡</div>
+                        <h4 class="font-bold mb-2 text-lg text-gray-800">Efficiency</h4>
+                        <p class="text-sm text-gray-600">Streamlined process that saves time, reduces paperwork, and speeds up procurement</p>
+                    </div>
+                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
+                        <div class="text-5xl mb-4">📈</div>
+                        <h4 class="font-bold mb-2 text-lg text-gray-800">Growth</h4>
+                        <p class="text-sm text-gray-600">Access to vast opportunities across all government sectors and departments</p>
+                    </div>
+                </div>
             </div>
-            <div class="process-steps">
-                <div class="process-step interactive-card">
-                    <div class="step-number">1</div>
-                    <h3>Tender Identification</h3>
-                    <p>Systematic scanning of GEM portal for relevant electrical cable tenders matching client capabilities and business objectives.</p>
-                </div>
-                <div class="process-step interactive-card">
-                    <div class="step-number">2</div>
-                    <h3>Document Analysis</h3>
-                    <p>Thorough review of tender documents, technical specifications, eligibility criteria, and compliance requirements.</p>
-                </div>
-                <div class="process-step interactive-card">
-                    <div class="step-number">3</div>
-                    <h3>Bid Preparation</h3>
-                    <p>Strategic pricing, technical documentation, and compliance certificate preparation for optimal bidding.</p>
-                </div>
-                <div class="process-step interactive-card">
-                    <div class="step-number">4</div>
-                    <h3>Submission & Tracking</h3>
-                    <p>Precision submission through GEM portal with continuous tracking and status monitoring.</p>
-                </div>
-                <div class="process-step interactive-card">
-                    <div class="step-number">5</div>
-                    <h3>Clarification & Negotiation</h3>
-                    <p>Professional handling of bid clarifications and price negotiations with government departments.</p>
-                </div>
-                <div class="process-step interactive-card">
-                    <div class="step-number">6</div>
-                    <h3>Contract Finalization</h3>
-                    <p>Complete contract documentation, performance bank guarantees, and order finalization.</p>
-                </div>
+
+            <!-- Tender Process -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 section-title">Complete Tender Process Workflow</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="tenderProcessContainer"></div>
             </div>
         </div>
     </section>
 
-    <!-- Cable Manufacturing Expertise Section -->
-    <section class="cable-expertise" id="cable">
-        <div class="container">
-            <div class="section-title">
-                <h2>Electrical Cable Expertise</h2>
+    <!-- Projects Portfolio -->
+    <section id="projects" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Major Projects Portfolio</h2>
+                <p class="text-gray-600 text-lg">Successful Government Contracts Worth ₹60+ Crores</p>
             </div>
-            <div class="expertise-grid">
-                <div class="expertise-card interactive-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>HV/LV Power Cables</h3>
-                    <p>Specialized knowledge in high voltage and low voltage electrical power cables for various industrial applications</p>
-                </div>
-                <div class="expertise-card interactive-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Industrial Cables</h3>
-                    <p>Expertise in cables for industrial applications including manufacturing plants, power stations, and infrastructure projects</p>
-                </div>
-                <div class="expertise-card interactive-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Building Wiring Cables</h3>
-                    <p>Comprehensive understanding of building wiring cables, domestic cables, and construction electrical requirements</p>
-                </div>
-                <div class="expertise-card interactive-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Quality Standards</h3>
-                    <p>Thorough knowledge of ISI, IEC, and other quality standards specific to electrical cable manufacturing and specifications</p>
-                </div>
-            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer"></div>
         </div>
     </section>
 
-    <!-- NEW: Professional Services Section -->
-    <section class="professional-services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Professional Services</h2>
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Consulting Services</h2>
+                <p class="text-gray-600 text-lg">Comprehensive Solutions for Your Tender Management Needs</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card interactive-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Complete Tender Management</h3>
-                    <p>End-to-end tender management from identification to contract finalization including documentation, submission, and follow-up.</p>
-                    <div class="service-price">Starting at ₹25,000</div>
-                    <a href="#contact" class="btn btn-outline">Get Quote</a>
-                </div>
-                <div class="service-card interactive-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>GEM Portal Assistance</h3>
-                    <p>Complete GEM portal vendor registration, bid submission, and portal management services with guaranteed compliance.</p>
-                    <div class="service-price">Starting at ₹15,000</div>
-                    <a href="#contact" class="btn btn-outline">Get Quote</a>
-                </div>
-                <div class="service-card interactive-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Tender Consultation</h3>
-                    <p>Strategic tender consultation, bid strategy development, and pricing optimization for maximum success rate.</p>
-                    <div class="service-price">Starting at ₹10,000</div>
-                    <a href="#contact" class="btn btn-outline">Get Quote</a>
-                </div>
-            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesContainer"></div>
         </div>
     </section>
 
-    <!-- NEW: Success Stories Section -->
-    <section class="success-stories" id="success">
-        <div class="container">
-            <div class="section-title">
-                <h2>Success Stories</h2>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Let's Connect</h2>
+                <p class="text-gray-600 text-lg">Ready to discuss your tender management needs?</p>
             </div>
-            <div class="stories-grid">
-                <div class="story-card interactive-card">
-                    <h3>BHEL Power Project</h3>
-                    <div class="story-value">₹5.2 Crores</div>
-                    <p>Successfully secured a major cable supply contract for BHEL's thermal power plant expansion, delivering high-voltage power cables with 100% compliance to technical specifications.</p>
-                    <div class="highlight">Key Achievement: 30% cost savings through strategic bidding</div>
-                </div>
-                <div class="story-card interactive-card">
-                    <h3>NDMC Infrastructure Upgrade</h3>
-                    <div class="story-value">₹3.8 Crores</div>
-                    <p>Managed end-to-end tender process for NDMC's city infrastructure upgrade, supplying building wires and control cables for 50+ government buildings.</p>
-                    <div class="highlight">Key Achievement: Completed project 15 days ahead of schedule</div>
-                </div>
-                <div class="story-card interactive-card">
-                    <h3>Railway Electrification</h3>
-                    <div class="story-value">₹7.5 Crores</div>
-                    <p>Led the tender team for railway electrification project, providing specialized cables that met stringent railway safety standards and specifications.</p>
-                    <div class="highlight">Key Achievement: Zero quality rejections during inspection</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tender Analytics Section -->
-    <section class="analytics">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tender Performance Analytics</h2>
-            </div>
-            <div class="analytics-grid">
-                <div class="analytics-card interactive-card">
-                    <h3>Monthly Tender Performance</h3>
-                    <div class="chart-container">
-                        <canvas id="monthlyChart"></canvas>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <a href="https://wa.me/918287903077" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group">
+                    <span class="text-5xl">💬</span>
+                    <div>
+                        <div class="font-bold text-xl mb-1 text-white">WhatsApp</div>
+                        <div class="text-green-100">+91 8287903077</div>
                     </div>
-                </div>
-                <div class="analytics-card interactive-card">
-                    <h3>Success Rate by Cable Type</h3>
-                    <div class="chart-container">
-                        <canvas id="cableTypeChart"></canvas>
-                    </div>
-                </div>
-                <div class="analytics-card interactive-card">
-                    <h3>Tender Value Distribution</h3>
-                    <div class="chart-container">
-                        <canvas id="tenderValueChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </a>
 
-    <!-- NEW: Certificates Section -->
-    <section class="certificates" id="certificates">
-        <div class="container">
-            <div class="section-title">
-                <h2>Certifications & Qualifications</h2>
+                <button onclick="downloadResume()" class="bg-gradient-to-r from-blue-600 to-purple-700 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group">
+                    <span class="text-5xl">📥</span>
+                    <div>
+                        <div class="font-bold text-xl mb-1 text-white">Download</div>
+                        <div class="text-blue-100">Resume PDF</div>
+                    </div>
+                </button>
             </div>
-            <div class="certificates-grid">
-                <div class="certificate-card interactive-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Graduation Degree</h3>
-                    <p>Bachelor's Degree from Shobhit University, Meerut</p>
-                </div>
-                <div class="certificate-card interactive-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Computer Diploma</h3>
-                    <p>Six Month Diploma in Computer Application</p>
-                </div>
-                <div class="certificate-card interactive-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-keyboard"></i>
-                    </div>
-                    <h3>Typing Skills</h3>
-                    <p>English Typing: 35-40 WPM<br>Hindi Typing: Working Knowledge</p>
-                </div>
-                <div class="certificate-card interactive-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>20+ Years Experience</h3>
-                    <p>Two decades of specialized experience in electrical cable tender management</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- NEW: Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-card interactive-card">
-                    <div class="testimonial-text">
-                        "Janmejay's expertise in tender management has been instrumental in our success with government contracts. His attention to detail and strategic approach resulted in a 40% increase in our tender success rate."
+            <div class="glass-effect p-8 rounded-2xl mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Contact Details</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl mb-3">📞</div>
+                        <div class="font-semibold mb-2 text-gray-800">Phone</div>
+                        <div class="text-gray-600">+91 8287903077</div>
                     </div>
-                    <div class="testimonial-author">Mr. Sharma</div>
-                    <div class="testimonial-role">Director, Hyphen Cables</div>
-                </div>
-                <div class="testimonial-card interactive-card">
-                    <div class="testimonial-text">
-                        "Working with Janmejay transformed our government tender operations. His GEM portal expertise and systematic approach helped us secure contracts worth over ₹20 crores in the last two years."
+                    <div>
+                        <div class="text-4xl mb-3">✉️</div>
+                        <div class="font-semibold mb-2 text-gray-800">Email</div>
+                        <div class="text-gray-600 break-all text-sm">janmejay_jyoti@yahoo.com</div>
                     </div>
-                    <div class="testimonial-author">Mr. Gupta</div>
-                    <div class="testimonial-role">CEO, Suraj Cables</div>
+                    <div>
+                        <div class="text-4xl mb-3">📍</div>
+                        <div class="font-semibold mb-2 text-gray-800">Location</div>
+                        <div class="text-gray-600">Delhi - 110042, India</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Department Expertise Section -->
-    <section class="departments">
-        <div class="container">
-            <div class="section-title">
-                <h2>Department Expertise</h2>
-            </div>
-            <div class="departments-grid">
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-industry"></i>
+            <!-- Contact Form -->
+            <div class="glass-effect p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Send a Message</h3>
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Name</label>
+                        <input type="text" id="formName" required class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your name">
                     </div>
-                    <h3>DGS&D</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-bolt"></i>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Email</label>
+                        <input type="email" id="formEmail" required class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your email">
                     </div>
-                    <h3>BHEL</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-gas-pump"></i>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Message</label>
+                        <textarea id="formMessage" required rows="4" class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your message"></textarea>
                     </div>
-                    <h3>BPCL</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h3>NDMC</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-power-off"></i>
-                    </div>
-                    <h3>PSPCL</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3>TNEB</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-portrait"></i>
-                    </div>
-                    <h3>VIZAG</h3>
-                </div>
-                <div class="department-card interactive-card">
-                    <div class="department-icon">
-                        <i class="fas fa-charging-station"></i>
-                    </div>
-                    <h3>WBSEDCL</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW: Contact Form Section -->
-    <section class="contact-form-section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="form-container">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Required</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option value="tender-management">Complete Tender Management</option>
-                            <option value="gem-portal">GEM Portal Assistance</option>
-                            <option value="consultation">Tender Consultation</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Project Requirements</label>
-                        <textarea id="message" name="message" placeholder="Please describe your tender requirements, project scope, and timeline..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-gold" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Enquiry
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg font-semibold text-white hover:shadow-lg transition-all">
+                        Send Message
                     </button>
                 </form>
+                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 border border-green-500 rounded-lg text-center">
+                    <span class="text-green-700 font-semibold">✓ Message sent successfully!</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Electrical Cable Tender Excellence</h3>
-                    <p>20+ years of specialized experience in electrical cable tender management, delivering exceptional results for leading cable manufacturers across India.</p>
-                    <p>Expert in government tenders, GEM portal operations, and strategic bid management for optimal success rates.</p>
+    <footer class="py-8 px-4 glass-effect border-t border-gray-200 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4">
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg flex items-center justify-center font-bold text-xl text-white">
+                        JV
+                    </div>
+                    <span class="font-bold text-xl text-gray-800">Janmejay Vashisht</span>
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#dashboard">Dashboard</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#gem">GEM Expertise</a></li>
-                        <li><a href="#process">GEM Process</a></li>
-                        <li><a href="#cable">Cable Expertise</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#success">Success Stories</a></li>
-                        <li><a href="#certificates">Certificates</a></li>
-                    </ul>
+                <p class="text-gray-600">
+                    Senior Tender Management Expert | 20+ Years Experience
+                </p>
+                <p class="text-gray-500 text-sm">
+                    Specialized in Government Procurement, GEM Portal & Strategic Bidding
+                </p>
+                <div class="flex justify-center space-x-6 pt-4">
+                    <a href="tel:+918287903077" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">📞</a>
+                    <a href="mailto:janmejay_jyoti@yahoo.com" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">✉️</a>
+                    <a href="https://wa.me/918287903077" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">💬</a>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-envelope"></i> janmejay_jyoti@yahoo.com</p>
-                    <p><i class="fas fa-phone"></i> +91 8287903077</p>
-                    <p><i class="fas fa-map-marker-alt"></i> H. No. 280, Prahaladpur Bangar, Delhi-110042</p>
-                    <p><i class="fas fa-briefcase"></i> Currently: Hyphen Cables Pvt Ltd</p>
-                    <p><i class="fas fa-clock"></i> Available: Mon-Sat, 9:00 AM - 6:00 PM</p>
+                <div class="pt-6 border-t border-gray-200 text-gray-500 text-sm">
+                    <p>&copy; 2025 Janmejay Vashisht. All rights reserved.</p>
+                    <p class="mt-2 text-xs">Designed & Developed with ❤️ for Excellence in Tender Management</p>
                 </div>
             </div>
-            <div class="social-icons">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://wa.me/918287903077" class="social-icon" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="mailto:janmejay_jyoti@yahoo.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p class="copyright">Copyright © 2025 Janmejay Vashisht | Senior Tender Manager - Electrical Cables & GEM Portal Expert | All Rights Reserved</p>
         </div>
     </footer>
 
     <script>
-        // Enhanced JavaScript for Premium Experience
+        // Data
+        const experiences = [
+            {
+                title: "Sr. Tender Manager",
+                company: "Hyphen Cables Pvt. Ltd.",
+                period: "June 2025 - Present",
+                location: "Delhi",
+                icon: "🏆",
+                color: "from-yellow-500 to-orange-500",
+                responsibilities: [
+                    "Leading complete tender management for state & central government projects",
+                    "Supervising bid preparation, cost estimation & documentation",
+                    "Ensuring compliance with GEM, BHEL, NTPC, PSPCL guidelines",
+                    "Mentoring junior executives for process efficiency"
+                ],
+                achievements: [
+                    "Increased win rate by 35% in first 6 months",
+                    "Streamlined documentation process reducing time by 40%",
+                    "Successfully managed tenders worth ₹50+ Crores"
+                ]
+            },
+            {
+                title: "Tender Executive Cum Office Co-Ordinator",
+                company: "M/s. Suraj Cables (Brand: SURAJ)",
+                period: "June 2021 - Dec 2024",
+                location: "Delhi",
+                icon: "⭐",
+                color: "from-blue-500 to-cyan-500",
+                responsibilities: [
+                    "Managed tender queries for government & PSU projects",
+                    "Prepared technical & commercial bid documents",
+                    "Coordinated internal departments for seamless execution"
+                ],
+                achievements: [
+                    "Won 85+ government tenders",
+                    "Maintained 90%+ on-time submission rate",
+                    "Established vendor relationships with 20+ PSUs"
+                ]
+            },
+            {
+                title: "Tender Executive Cum Office Co-Ordinator",
+                company: "M/s. Shree Bhagwati Cables (SBC/TORREX)",
+                period: "Jan 2019 - Mar 2021",
+                location: "Delhi",
+                icon: "🎖️",
+                color: "from-purple-500 to-pink-500",
+                responsibilities: [
+                    "Handled online & offline tenders via GEM & E-Procurement portals",
+                    "Prepared quotations & comparative statements",
+                    "Maintained official correspondences & records"
+                ],
+                achievements: [
+                    "Successfully registered on 15+ government portals",
+                    "Managed multi-state tender submissions",
+                    "Improved bid quality scoring by 25%"
+                ]
+            },
+            {
+                title: "Tender Executive",
+                company: "M/s. Vijaya Cables (Brand: OSCAR)",
+                period: "Jan 2005 - Sep 2017",
+                location: "Delhi",
+                icon: "💼",
+                color: "from-green-500 to-teal-500",
+                responsibilities: [
+                    "Drafted tenders for DGS&D, BHEL, BPCL, NDMC, PSPCL, TNEB",
+                    "Coordinated bid clarifications & tender follow-ups",
+                    "Ensured adherence to technical specifications"
+                ],
+                achievements: [
+                    "Built foundation of tender management expertise",
+                    "Handled 200+ successful tender submissions",
+                    "Developed systematic documentation processes"
+                ]
+            }
+        ];
+
+        const tenderProcess = [
+            { step: "01", title: "Tender Identification", description: "Monitoring portals like GEM, CPPP, and department websites for relevant opportunities", icon: "🔍", color: "from-blue-500 to-cyan-500" },
+            { step: "02", title: "Document Analysis", description: "Thorough review of tender documents, eligibility criteria, and technical specifications", icon: "📖", color: "from-purple-500 to-pink-500" },
+            { step: "03", title: "Bid Preparation", description: "Preparing technical and commercial bids with accurate costing and documentation", icon: "📄", color: "from-green-500 to-teal-500" },
+            { step: "04", title: "Internal Coordination", description: "Liaising with sales, accounts, and production teams for data verification", icon: "👥", color: "from-orange-500 to-red-500" },
+            { step: "05", title: "Submission & Follow-up", description: "Timely submission of bids and proactive follow-up for clarifications", icon: "📤", color: "from-yellow-500 to-orange-500" },
+            { step: "06", title: "Post-Bid Management", description: "Handling negotiations, contract finalization, and documentation", icon: "✅", color: "from-indigo-500 to-purple-500" }
+        ];
+
+        const projects = [
+            { title: "NTPC Power Grid Project", client: "NTPC Limited", value: "₹12.5 Crores", status: "Won", year: "2024", description: "Successfully managed and won a major tender for cable supply to NTPC's power grid expansion project across multiple states.", highlights: ["Multi-state coordination", "Complex technical specs", "Competitive pricing strategy"], image: "🏭" },
+            { title: "Delhi Metro Phase IV", client: "DMRC", value: "₹8.2 Crores", status: "Won", year: "2024", description: "Secured cable supply contract for Delhi Metro's Phase IV expansion with stringent quality and delivery requirements.", highlights: ["Fast-track submission", "Quality certification", "Timely delivery"], image: "🚇" },
+            { title: "State Electricity Board", client: "PSPCL", value: "₹15.8 Crores", status: "Won", year: "2023", description: "Major tender win for electrical cable supply to Punjab State Power Corporation Limited for rural electrification.", highlights: ["Bulk supply management", "Rural reach", "Cost optimization"], image: "⚡" },
+            { title: "Smart City Initiative", client: "Multiple Municipal Corporations", value: "₹6.5 Crores", status: "Won", year: "2023", description: "Part of India's Smart City Mission - supplied specialized cables for urban infrastructure development.", highlights: ["Smart technology", "Multi-city coordination", "Sustainable solutions"], image: "🌆" },
+            { title: "Railway Electrification", client: "Indian Railways", value: "₹10.3 Crores", status: "Won", year: "2022", description: "Critical cable supply for railway electrification project supporting India's net-zero emission goals.", highlights: ["National project", "High safety standards", "Technical excellence"], image: "🚂" },
+            { title: "Defense Infrastructure", client: "Ministry of Defence", value: "₹7.9 Crores", status: "Won", year: "2022", description: "Secured tender for defense infrastructure project with highest security and quality clearances.", highlights: ["Security clearance", "Premium quality", "Confidential specs"], image: "🛡️" }
+        ];
+
+        const services = [
+            { icon: "📄", title: "Tender Preparation", description: "Complete tender documentation from scratch to submission with accuracy and compliance", features: ["Technical Bid Preparation", "Commercial Bid Analysis", "Document Verification", "Quality Assurance"], pricing: "Starting ₹15,000" },
+            { icon: "🛡️", title: "GEM Portal Management", description: "Expert handling of Government e-Marketplace portal for procurement excellence", features: ["Portal Registration", "Product Listing", "Bid Submission", "Order Management"], pricing: "Starting ₹20,000" },
+            { icon: "📈", title: "Bid Strategy Consulting", description: "Strategic guidance on competitive bidding and cost optimization", features: ["Market Analysis", "Pricing Strategy", "Competitor Research", "Win Strategy"], pricing: "Starting ₹25,000" },
+            { icon: "👥", title: "Vendor Registration", description: "End-to-end support for vendor registration on government portals", features: ["Documentation Support", "Portal Setup", "Certificate Assistance", "Profile Optimization"], pricing: "Starting ₹10,000" },
+            { icon: "✅", title: "Compliance Audit", description: "Ensuring 100% compliance with government procurement guidelines", features: ["Document Review", "Gap Analysis", "Correction Support", "Compliance Report"], pricing: "Starting ₹18,000" },
+            { icon: "🎯", title: "Tender Training", description: "Training programs for teams on tender management best practices", features: ["Portal Training", "Process Workshop", "Best Practices", "Q&A Sessions"], pricing: "Starting ₹30,000" }
+        ];
+
+        // Initialize Typed.js
         document.addEventListener('DOMContentLoaded', function() {
-            // Enhanced animations for all elements
-            const animatedElements = document.querySelectorAll('.timeline-content, .expertise-card, .stat-item, .dashboard-card, .analytics-card, .department-card, .story-card, .testimonial-card, .process-step, .service-card, .certificate-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in-up', 'visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animatedElements.forEach(el => {
-                el.classList.add('fade-in-up');
-                observer.observe(el);
+            const typed = new Typed('#typed-text', {
+                strings: [
+                    'Senior Tender Executive',
+                    '20+ Years Cable Industry Experience',
+                    'Expert in Tender Management',
+                    'Document & Office Coordination Specialist'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true
             });
+        });
 
-            // Add animation delay for stats
-            const statItems = document.querySelectorAll('.stat-item');
-            statItems.forEach((item, index) => {
-                item.style.transitionDelay = `${index * 0.2}s`;
-            });
-
-            // Counter Animation
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const increment = target / 100;
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.innerText = Math.ceil(current);
-                        setTimeout(updateCounter, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                
-                // Start counter when element is in viewport
-                const counterObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            updateCounter();
-                            counterObserver.unobserve(entry.target);
-                        }
-                    });
-                });
-                
-                counterObserver.observe(counter);
-            });
-
-            // Navbar scroll effect
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
+        // Counter Animation
+        function animateCounter(id, target, duration) {
+            let current = 0;
+            const increment = target / (duration / 16);
+            const element = document.getElementById(id);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (id === 'counter3' ? '%' : '+');
+                    clearInterval(timer);
                 } else {
-                    navbar.classList.remove('scrolled');
+                    element.textContent = Math.floor(current) + (id === 'counter3' ? '%' : '+');
+                }
+            }, 16);
+        }
+
+        // Initialize counters
+        window.addEventListener('load', () => {
+            animateCounter('counter1', 20, 2000);
+            animateCounter('counter2', 500, 2000);
+            animateCounter('counter3', 95, 2000);
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, .card-hover').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-effect', 'shadow-lg');
+            } else {
+                navbar.classList.remove('glass-effect', 'shadow-lg');
+            }
+
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('hidden');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+            }
+
+            // Update active nav link
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-item');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
                 }
             });
 
-            // Mobile menu toggle
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }));
-
-            // Back to Top Button
-            const backToTopBtn = document.querySelector('.back-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('active');
-                } else {
-                    backToTopBtn.classList.remove('active');
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('nav-active');
                 }
             });
+        });
 
-            backToTopBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
             });
+        });
 
-            // Live Chat Button
-            const liveChatBtn = document.getElementById('liveChatBtn');
-            liveChatBtn.addEventListener('click', () => {
-                window.open('https://wa.me/918287903077', '_blank');
-            });
+        // Scroll to top
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-            // Contact Form Handling
-            const contactForm = document.getElementById('contactForm');
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+        // Render Experiences
+        const experienceContainer = document.getElementById('experienceContainer');
+        experiences.forEach(exp => {
+            const expDiv = document.createElement('div');
+            expDiv.className = 'glass-effect p-8 rounded-2xl card-hover';
+            expDiv.innerHTML = `
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-gradient-to-r ${exp.color} rounded-xl flex items-center justify-center flex-shrink-0 text-3xl text-white">
+                            ${exp.icon}
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">${exp.title}</h3>
+                            <p class="text-blue-600 font-semibold text-lg">${exp.company}</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mt-4 md:mt-0 md:text-right">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>${exp.period}</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>📍</span>
+                            <span>${exp.location}</span>
+                        </div>
+                    </div>
+                </div>
                 
-                // Get form data
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData);
-                
-                // Here you would typically send the data to a server
-                // For now, we'll just show an alert and reset the form
-                alert('Thank you for your enquiry! I will get back to you within 24 hours with a detailed proposal.');
-                contactForm.reset();
-                
-                // In a real implementation, you would use fetch() to send the data to your backend
-                /*
-                fetch('/send-message', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error sending your message. Please try again.');
-                });
-                */
-            });
-
-            // Download Resume Functionality
-            const downloadButtons = document.querySelectorAll('a[href="janmejay cv (2).pdf"]');
-            downloadButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    // In a real implementation, this would link to your actual PDF
-                    // The download attribute will handle the download
-                    console.log('Resume download initiated');
-                });
-            });
-
-            // Service Card Click Handler
-            const serviceCards = document.querySelectorAll('.service-card .btn-outline');
-            serviceCards.forEach(card => {
-                card.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const serviceTitle = card.closest('.service-card').querySelector('h3').textContent;
-                    document.getElementById('service').value = serviceTitle;
-                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
-            // Initialize Charts
-            const successCtx = document.getElementById('successChart').getContext('2d');
-            const successChart = new Chart(successCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Successful', 'Unsuccessful'],
-                    datasets: [{
-                        data: [95, 5],
-                        backgroundColor: [
-                            'rgba(10, 36, 99, 0.8)',
-                            'rgba(212, 175, 55, 0.8)'
-                        ],
-                        borderColor: [
-                            'rgb(10, 36, 99)',
-                            'rgb(212, 175, 55)'
-                        ],
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-
-            const volumeCtx = document.getElementById('volumeChart').getContext('2d');
-            const volumeChart = new Chart(volumeCtx, {
-                type: 'line',
-                data: {
-                    labels: ['2020', '2021', '2022', '2023', '2024'],
-                    datasets: [{
-                        label: 'Tenders Managed',
-                        data: [180, 220, 240, 280, 320],
-                        borderColor: 'rgb(212, 175, 55)',
-                        backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
-                }
-            });
-
-            const departmentCtx = document.getElementById('departmentChart').getContext('2d');
-            const departmentChart = new Chart(departmentCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Power', 'Railways', 'Defense', 'Municipal', 'Oil & Gas'],
-                    datasets: [{
-                        label: 'Tenders',
-                        data: [35, 25, 15, 15, 10],
-                        backgroundColor: [
-                            'rgba(10, 36, 99, 0.7)',
-                            'rgba(26, 58, 138, 0.7)',
-                            'rgba(42, 82, 190, 0.7)',
-                            'rgba(212, 175, 55, 0.7)',
-                            'rgba(184, 148, 31, 0.7)'
-                        ],
-                        borderColor: [
-                            'rgb(10, 36, 99)',
-                            'rgb(26, 58, 138)',
-                            'rgb(42, 82, 190)',
-                            'rgb(212, 175, 55)',
-                            'rgb(184, 148, 31)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
-                }
-            });
-
-            const valueCtx = document.getElementById('valueChart').getContext('2d');
-            const valueChart = new Chart(valueCtx, {
-                type: 'pie',
-                data: {
-                    labels: ['Under ₹10L', '₹10L-₹1Cr', '₹1Cr-₹5Cr', 'Above ₹5Cr'],
-                    datasets: [{
-                        data: [30, 40, 20, 10],
-                        backgroundColor: [
-                            'rgba(10, 36, 99, 0.7)',
-                            'rgba(26, 58, 138, 0.7)',
-                            'rgba(212, 175, 55, 0.7)',
-                            'rgba(184, 148, 31, 0.7)'
-                        ],
-                        borderColor: [
-                            'rgb(10, 36, 99)',
-                            'rgb(26, 58, 138)',
-                            'rgb(212, 175, 55)',
-                            'rgb(184, 148, 31)'
-                        ],
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-
-            // Additional Charts for Analytics Section
-            const monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
-            const monthlyChart = new Chart(monthlyCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    datasets: [{
-                        label: 'Tenders Submitted',
-                        data: [25, 30, 28, 35, 40, 38, 42, 45, 40, 38, 35, 30],
-                        borderColor: 'rgb(10, 36, 99)',
-                        backgroundColor: 'rgba(10, 36, 99, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-
-            const cableTypeCtx = document.getElementById('cableTypeChart').getContext('2d');
-            const cableTypeChart = new Chart(cableTypeCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Power Cables', 'Building Wires', 'Control Cables', 'Flexible Cables'],
-                    datasets: [{
-                        label: 'Success Rate %',
-                        data: [96, 94, 92, 95],
-                        backgroundColor: 'rgba(212, 175, 55, 0.7)',
-                        borderColor: 'rgb(212, 175, 55)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100
-                        }
-                    }
-                }
-            });
-
-            const tenderValueCtx = document.getElementById('tenderValueChart').getContext('2d');
-            const tenderValueChart = new Chart(tenderValueCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Small (<₹10L)', 'Medium (₹10L-₹1Cr)', 'Large (₹1Cr-₹5Cr)', 'XL (>₹5Cr)'],
-                    datasets: [{
-                        data: [40, 35, 20, 5],
-                        backgroundColor: [
-                            'rgba(10, 36, 99, 0.7)',
-                            'rgba(26, 58, 138, 0.7)',
-                            'rgba(212, 175, 55, 0.7)',
-                            'rgba(184, 148, 31, 0.7)'
-                        ],
-                        borderColor: [
-                            'rgb(10, 36, 99)',
-                            'rgb(26, 58, 138)',
-                            'rgb(212, 175, 55)',
-                            'rgb(184, 148, 31)'
-                        ],
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-
-            // Lazy loading for images
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                });
-
-                document.querySelectorAll('img[data-src]').forEach(img => {
-                    imageObserver.observe(img);
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-lg mb-3 text-blue-600">Key Responsibilities:</h4>
+                        <ul class="space-y-2">
+                            ${exp.responsibilities.map(resp => `
+                                <li class="flex items-start space-x-3 text-gray-600">
+                                    <span class="text-blue-600 mt-1">→</span>
+                                    <span>${resp}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-3 text-green-600">Major Achievements:</h4>
+                        <ul class="space-y-2">
+                            ${exp.achievements.map(ach => `
+                                <li class="flex items-start space-x-3 text-gray-600">
+                                    <span class="text-yellow-500 mt-1">🏆</span>
+                                    <span>${ach}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            experienceContainer.appendChild(expDiv);
+            
+            // Initialize Vanilla Tilt for 3D effect
+            if (window.VanillaTilt) {
+                VanillaTilt.init(expDiv, {
+                    max: 5,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
                 });
             }
         });
+
+        // Render Tender Process
+        const tenderProcessContainer = document.getElementById('tenderProcessContainer');
+        tenderProcess.forEach(process => {
+            const processDiv = document.createElement('div');
+            processDiv.className = 'glass-effect p-6 rounded-2xl card-hover relative overflow-hidden group';
+            processDiv.innerHTML = `
+                <div class="absolute top-0 right-0 text-9xl font-bold text-blue-200 opacity-50 group-hover:opacity-70 transition-all">
+                    ${process.step}
+                </div>
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-gradient-to-r ${process.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform text-3xl text-white">
+                        ${process.icon}
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full flex items-center justify-center font-bold text-xl text-white mb-4">
+                        ${process.step}
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">${process.title}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">${process.description}</p>
+                </div>
+            `;
+            tenderProcessContainer.appendChild(processDiv);
+            
+            // Initialize Vanilla Tilt for 3D effect
+            if (window.VanillaTilt) {
+                VanillaTilt.init(processDiv, {
+                    max: 5,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                });
+            }
+        });
+
+        // Render Projects
+        const projectsContainer = document.getElementById('projectsContainer');
+        projects.forEach((project, index) => {
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'glass-effect rounded-2xl card-hover overflow-hidden group cursor-pointer';
+            projectDiv.innerHTML = `
+                <div class="p-8">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">${project.image}</div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                            ${project.status}
+                        </span>
+                        <span class="text-gray-600 text-sm">${project.year}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">${project.title}</h3>
+                    <p class="text-blue-600 font-semibold mb-2">${project.client}</p>
+                    <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-700 mb-4">
+                        ${project.value}
+                    </p>
+                    <p class="text-gray-600 text-sm mb-4">${project.description}</p>
+                    
+                    <div id="projectHighlights${index}" class="hidden mt-4 pt-4 border-t border-gray-200">
+                        <h4 class="font-bold mb-2 text-gray-800">Key Highlights:</h4>
+                        <div class="space-y-2">
+                            ${project.highlights.map(highlight => `
+                                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                    <span class="text-yellow-500">⭐</span>
+                                    <span>${highlight}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            projectDiv.addEventListener('click', () => {
+                const highlights = document.getElementById(`projectHighlights${index}`);
+                highlights.classList.toggle('hidden');
+            });
+            projectsContainer.appendChild(projectDiv);
+            
+            // Initialize Vanilla Tilt for 3D effect
+            if (window.VanillaTilt) {
+                VanillaTilt.init(projectDiv, {
+                    max: 5,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                });
+            }
+        });
+
+        // Render Services
+        const servicesContainer = document.getElementById('servicesContainer');
+        services.forEach(service => {
+            const serviceDiv = document.createElement('div');
+            serviceDiv.className = 'glass-effect p-8 rounded-2xl card-hover group';
+            serviceDiv.innerHTML = `
+                <div class="text-5xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    ${service.icon}
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">${service.title}</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">${service.description}</p>
+                
+                <div class="border-t border-gray-200 pt-4 mb-4">
+                    <h4 class="font-semibold mb-2 text-sm text-blue-600">Service Includes:</h4>
+                    <ul class="space-y-1">
+                        ${service.features.map(feature => `
+                            <li class="text-sm text-gray-600 flex items-center space-x-2">
+                                <span class="text-green-600">✓</span>
+                                <span>${feature}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                
+                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                    <span class="text-lg font-bold text-green-600">${service.pricing}</span>
+                    <button class="px-4 py-2 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg text-sm font-semibold transition-all">
+                        Learn More
+                    </button>
+                </div>
+            `;
+            servicesContainer.appendChild(serviceDiv);
+            
+            // Initialize Vanilla Tilt for 3D effect
+            if (window.VanillaTilt) {
+                VanillaTilt.init(serviceDiv, {
+                    max: 5,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                });
+            }
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            const message = document.getElementById('formMessage').value;
+            
+            // Show success message
+            document.getElementById('formSuccess').classList.remove('hidden');
+            
+            // Reset form
+            setTimeout(() => {
+                document.getElementById('formSuccess').classList.add('hidden');
+                document.getElementById('contactForm').reset();
+            }, 3000);
+            
+            console.log('Form submitted:', { name, email, message });
+        });
+
+        // Download Resume Function
+        function downloadResume() {
+            alert('Resume download functionality - Please add your resume PDF URL here');
+            // window.location.href = 'YOUR_RESUME_PDF_URL';
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => {
+            fadeObserver.observe(el);
+        });
+
+        // Skill bars animation
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const progress = bar.querySelector('.skill-progress');
+                        const skill = bar.dataset.skill;
+                        setTimeout(() => {
+                            progress.style.width = skill + '%';
+                        }, 100);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe skills section
+        setTimeout(() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) skillObserver.observe(aboutSection);
+        }, 100);
+
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would initialize particles.js with your configuration
+            // For now, we'll just add a simple placeholder
+            console.log('Particles.js would be initialized here');
+        });
+
+        // Initialize GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animate sections on scroll
+        gsap.utils.toArray('.fade-in').forEach(section => {
+            gsap.fromTo(section, 
+                { opacity: 0, y: 50 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 1, 
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        console.log('Portfolio website loaded successfully! 🎉');
+        console.log('Features: Responsive, Interactive, Animated, Professional');
     </script>
 </body>
 </html>
