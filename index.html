@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janmejay Vashisht - Senior Tender Manager Portfolio</title>
+    <title>Janmejay Vashisht | Senior Tender Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
         :root {
-            --primary: #1e40af;
-            --secondary: #7e22ce;
-            --accent: #0ea5e9;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --text: #1e293b;
-            --text-light: #64748b;
+            --primary: #000000;
+            --secondary: #0A0F1F;
+            --accent: #00FFFF;
+            --accent2: #8A2BE2;
+            --text: #C8D1E0;
+            --text-light: #E2E8F0;
         }
         
         * {
@@ -31,20 +31,83 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background-color: var(--primary);
             color: var(--text);
             overflow-x: hidden;
+            cursor: none;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .neon-glow {
+            text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
+        }
+        
+        .neon-border {
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 10px var(--accent), inset 0 0 10px var(--accent);
         }
         
         .glass-effect {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: rgba(10, 15, 31, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
         
-        .smooth-scroll {
-            scroll-behavior: smooth;
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.2s ease;
+        }
+        
+        .cursor-trail {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent2);
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.7;
+        }
+        
+        .three-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .magnetic {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        
+        .magnetic:hover {
+            transform: scale(1.05);
         }
         
         .section-title {
@@ -60,37 +123,8 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--accent), var(--accent2));
             border-radius: 2px;
-        }
-        
-        .skill-bar {
-            transition: all 0.5s ease;
-        }
-        
-        .skill-progress {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .typed-cursor {
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
         }
         
         .floating {
@@ -99,7 +133,7 @@
         
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-20px); }
         }
         
         .pulse-slow {
@@ -111,102 +145,119 @@
             50% { opacity: 1; }
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .glow {
+            filter: drop-shadow(0 0 8px var(--accent));
         }
         
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
+        .particle {
+            position: absolute;
             border-radius: 50%;
-            background: rgba(30, 64, 175, 0.3);
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s;
-            mix-blend-mode: difference;
+            background: var(--accent);
+            opacity: 0.7;
         }
         
-        .cursor-hover {
-            width: 40px;
-            height: 40px;
-            background: rgba(30, 64, 175, 0.5);
+        .skill-bar {
+            transition: all 0.5s ease;
         }
         
-        .three-container {
-            width: 100%;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
+        .skill-progress {
+            transition: width 1.5s ease-in-out;
         }
         
-        .globe-container {
-            width: 100%;
-            height: 500px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
-        .spline-container {
-            width: 100%;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
+        .parallax-element {
+            will-change: transform;
         }
         
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(30px);
         }
         
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .neon-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
         
-        .nav-active {
-            color: var(--primary);
-            font-weight: 600;
+        .neon-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .neon-button:hover:before {
+            left: 100%;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--accent);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .scroll-indicator:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            width: 4px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: scroll 2s infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(15px); opacity: 0; }
         }
     </style>
 </head>
-<body class="smooth-scroll">
+<body class="gradient-bg">
+    <!-- 3D Background -->
+    <div id="threeBackground" class="three-container"></div>
+    
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
     
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-    
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg flex items-center justify-center font-bold text-xl text-white">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-xl text-white neon-glow">
                         JV
                     </div>
-                    <span class="font-bold text-xl text-gray-800">Janmejay Vashisht</span>
+                    <span class="font-bold text-xl text-white neon-glow">Janmejay Vashisht</span>
                 </div>
                 
                 <div class="hidden md:flex space-x-8" id="navLinks">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">About</a>
-                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Experience</a>
-                    <a href="#expertise" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Expertise</a>
-                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Projects</a>
-                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Services</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium nav-item">Contact</a>
+                    <a href="#home" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Experience</a>
+                    <a href="#expertise" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Expertise</a>
+                    <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Projects</a>
+                    <a href="#services" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Services</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium magnetic">Contact</a>
                 </div>
 
-                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                <button id="mobileMenuBtn" class="md:hidden text-gray-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -217,96 +268,101 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden glass-effect mt-4 rounded-lg">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Home</a>
-                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">About</a>
-                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Experience</a>
-                <a href="#expertise" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Expertise</a>
-                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Projects</a>
-                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Services</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded-md transition-all">Contact</a>
+                <a href="#home" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">About</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Experience</a>
+                <a href="#expertise" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Expertise</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Projects</a>
+                <a href="#services" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:bg-cyan-900/20 rounded-md transition-all">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" class="hidden fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+    <button id="scrollTopBtn" class="hidden fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 neon-button">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 relative z-10">
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 relative z-10">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 fade-in">
-                <div class="inline-block px-4 py-2 glass-effect rounded-full text-blue-600 text-sm font-semibold">
+                <div class="inline-block px-4 py-2 glass-effect rounded-full text-cyan-400 text-sm font-semibold neon-border">
                     ✨ 20+ Years of Excellence
                 </div>
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-gray-800">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
                     Senior Tender
-                    <span class="block gradient-text">
+                    <span class="block gradient-text neon-glow">
                         Management Expert
                     </span>
                 </h1>
                 <div class="h-12">
-                    <span id="typed-text" class="text-xl text-gray-600"></span>
+                    <span id="typed-text" class="text-xl text-gray-300"></span>
                 </div>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg font-semibold text-white hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center space-x-2">
+                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-semibold text-white hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center space-x-2 neon-button magnetic">
                         <span>Get In Touch</span>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
-                    <button onclick="downloadResume()" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 flex items-center space-x-2">
+                    <button onclick="downloadResume()" class="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-200 flex items-center space-x-2 neon-button magnetic">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                         </svg>
                         <span>Download Resume</span>
                     </button>
                 </div>
-                <div class="flex space-x-8 text-gray-600">
+                <div class="flex space-x-8 text-gray-400">
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gray-800" id="counter1">0</div>
+                        <div class="text-4xl font-bold text-white" id="counter1">0</div>
                         <div class="text-sm">Years Experience</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gray-800" id="counter2">0</div>
+                        <div class="text-4xl font-bold text-white" id="counter2">0</div>
                         <div class="text-sm">Tenders Managed</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gray-800" id="counter3">0</div>
+                        <div class="text-4xl font-bold text-white" id="counter3">0</div>
                         <div class="text-sm">Success Rate</div>
                     </div>
                 </div>
             </div>
             
             <div class="relative floating">
-                <div class="three-container glass-effect flex items-center justify-center">
-                    <div class="text-center space-y-4 p-8">
-                        <div class="text-6xl font-bold gradient-text mb-4">JV</div>
-                        <h3 class="text-2xl font-bold text-gray-800">3D Animation Placeholder</h3>
-                        <p class="text-gray-600">Three.js 3D text animation would render here</p>
+                <div class="w-full aspect-square rounded-2xl glass-effect flex items-center justify-center border border-cyan-500/30 hover:scale-105 transition-transform duration-500">
+                    <div class="text-center space-y-4">
+                        <div class="w-64 h-64 mx-auto rounded-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center overflow-hidden border-4 border-cyan-500/50 hover:border-purple-500/50 transition-all duration-300 glow">
+                            <img src="jony.jpeg" alt="Janmejay Vashisht" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-cyan-400 font-semibold">Janmejay Vashisht</p>
+                        <p class="text-sm text-gray-500">Senior Tender Management Expert</p>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 px-4 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">About Me</h2>
-                <p class="text-gray-600 text-lg">Dedicated Professional with Proven Track Record</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">About Me</h2>
+                <p class="text-gray-400 text-lg">Dedicated Professional with Proven Track Record</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-6">
-                    <div class="glass-effect p-8 rounded-2xl card-hover">
-                        <div class="text-5xl mb-4">💡</div>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Professional Summary</h3>
-                        <p class="text-gray-600 leading-relaxed">
+                    <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d">
+                        <div class="text-5xl mb-4 glow">💡</div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Professional Summary</h3>
+                        <p class="text-gray-300 leading-relaxed">
                             Result-oriented professional with over 20 years of specialized experience in tender management, 
                             documentation, and coordination within leading cable manufacturing companies. Expert in handling 
                             both online and offline government tenders, with deep knowledge of GEM portal, CPPP, and various 
@@ -314,43 +370,43 @@
                         </p>
                     </div>
 
-                    <div class="glass-effect p-8 rounded-2xl card-hover">
-                        <h3 class="text-2xl font-bold mb-4 flex items-center space-x-2 text-gray-800">
-                            <span>🎓</span>
+                    <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center space-x-2 text-white">
+                            <span class="glow">🎓</span>
                             <span>Education & Certifications</span>
                         </h3>
-                        <div class="space-y-3 text-gray-600 mb-6">
+                        <div class="space-y-3 text-gray-300 mb-6">
                             <div class="flex items-start space-x-3">
-                                <span class="text-blue-600">✓</span>
+                                <span class="text-cyan-400">✓</span>
                                 <span>Graduation - Shobhit University, Meerut</span>
                             </div>
                             <div class="flex items-start space-x-3">
-                                <span class="text-blue-600">✓</span>
+                                <span class="text-cyan-400">✓</span>
                                 <span>12th & 10th - CBSE, Delhi</span>
                             </div>
                             <div class="flex items-start space-x-3">
-                                <span class="text-blue-600">✓</span>
+                                <span class="text-cyan-400">✓</span>
                                 <span>Diploma in Computer Applications</span>
                             </div>
                         </div>
-                        <div class="border-t border-gray-200 pt-4">
-                            <h4 class="font-semibold mb-3 text-gray-800">Professional Certifications:</h4>
+                        <div class="border-t border-gray-700 pt-4">
+                            <h4 class="font-semibold mb-3 text-white">Professional Certifications:</h4>
                             <div class="grid grid-cols-2 gap-3">
-                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
-                                    <div class="font-semibold text-blue-600">Procurement Specialist</div>
-                                    <div class="text-xs text-gray-500">IIPA - 2023</div>
+                                <div class="bg-gray-800/30 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-cyan-400">Procurement Specialist</div>
+                                    <div class="text-xs text-gray-400">IIPA - 2023</div>
                                 </div>
-                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
-                                    <div class="font-semibold text-blue-600">GEM Portal Expert</div>
-                                    <div class="text-xs text-gray-500">GeM - 2022</div>
+                                <div class="bg-gray-800/30 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-cyan-400">GEM Portal Expert</div>
+                                    <div class="text-xs text-gray-400">GeM - 2022</div>
                                 </div>
-                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
-                                    <div class="font-semibold text-blue-600">Tender Management</div>
-                                    <div class="text-xs text-gray-500">NISG - 2021</div>
+                                <div class="bg-gray-800/30 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-cyan-400">Tender Management</div>
+                                    <div class="text-xs text-gray-400">NISG - 2021</div>
                                 </div>
-                                <div class="bg-blue-50 p-3 rounded-lg text-sm">
-                                    <div class="font-semibold text-blue-600">Public Procurement</div>
-                                    <div class="text-xs text-gray-500">UNDP - 2020</div>
+                                <div class="bg-gray-800/30 p-3 rounded-lg text-sm">
+                                    <div class="font-semibold text-cyan-400">Public Procurement</div>
+                                    <div class="text-xs text-gray-400">UNDP - 2020</div>
                                 </div>
                             </div>
                         </div>
@@ -358,79 +414,79 @@
                 </div>
 
                 <div class="space-y-6">
-                    <div class="glass-effect p-8 rounded-2xl card-hover">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Core Skills</h3>
+                    <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Core Skills</h3>
                         <div class="space-y-5">
                             <div class="skill-bar" data-skill="95">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">📄 Tender Management</span>
-                                    <span class="text-blue-600 font-semibold">95%</span>
+                                    <span class="text-gray-300">📄 Tender Management</span>
+                                    <span class="text-cyan-400 font-semibold">95%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="skill-bar" data-skill="98">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">🛡️ GEM Portal & E-Procurement</span>
-                                    <span class="text-blue-600 font-semibold">98%</span>
+                                    <span class="text-gray-300">🛡️ GEM Portal & E-Procurement</span>
+                                    <span class="text-cyan-400 font-semibold">98%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="skill-bar" data-skill="90">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">🧮 Cost Estimation & Analysis</span>
-                                    <span class="text-blue-600 font-semibold">90%</span>
+                                    <span class="text-gray-300">🧮 Cost Estimation & Analysis</span>
+                                    <span class="text-cyan-400 font-semibold">90%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="skill-bar" data-skill="95">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">✅ Documentation & Compliance</span>
-                                    <span class="text-blue-600 font-semibold">95%</span>
+                                    <span class="text-gray-300">✅ Documentation & Compliance</span>
+                                    <span class="text-cyan-400 font-semibold">95%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="skill-bar" data-skill="92">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">👥 Vendor Registration</span>
-                                    <span class="text-blue-600 font-semibold">92%</span>
+                                    <span class="text-gray-300">👥 Vendor Registration</span>
+                                    <span class="text-cyan-400 font-semibold">92%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="skill-bar" data-skill="88">
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-gray-700">📊 MIS & Reporting</span>
-                                    <span class="text-blue-600 font-semibold">88%</span>
+                                    <span class="text-gray-300">📊 MIS & Reporting</span>
+                                    <span class="text-cyan-400 font-semibold">88%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="skill-progress bg-gradient-to-r from-blue-600 to-purple-700 h-3 rounded-full" style="width: 0%"></div>
+                                <div class="w-full bg-gray-700 rounded-full h-3">
+                                    <div class="skill-progress bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full" style="width: 0%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="glass-effect p-8 rounded-2xl card-hover">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Contact Information</h3>
+                    <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Contact Information</h3>
                         <div class="space-y-4">
-                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                                <span>📞</span>
+                            <div class="flex items-center space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                                <span class="glow">📞</span>
                                 <span>+91 8287903077</span>
                             </div>
-                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                                <span>✉️</span>
+                            <div class="flex items-center space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                                <span class="glow">✉️</span>
                                 <span class="break-all">janmejay_jyoti@yahoo.com</span>
                             </div>
-                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                                <span>📍</span>
+                            <div class="flex items-center space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                                <span class="glow">📍</span>
                                 <span>Delhi - 110042, India</span>
                             </div>
                         </div>
@@ -441,11 +497,11 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="experience" class="py-20 px-4 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Professional Journey</h2>
-                <p class="text-gray-600 text-lg">Two Decades of Excellence in Tender Management</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">Professional Journey</h2>
+                <p class="text-gray-400 text-lg">Two Decades of Excellence in Tender Management</p>
             </div>
 
             <div class="space-y-8" id="experienceContainer"></div>
@@ -456,98 +512,98 @@
     <section id="expertise" class="py-20 px-4 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">GEM Portal Expertise</h2>
-                <p class="text-gray-600 text-lg">Mastering Government e-Marketplace for Optimal Results</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">GEM Portal Expertise</h2>
+                <p class="text-gray-400 text-lg">Mastering Government e-Marketplace for Optimal Results</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 mb-12">
-                <div class="glass-effect p-8 rounded-2xl card-hover">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-4xl">
+                <div class="glass-effect p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300 card-3d">
+                    <div class="w-20 h-20 bg-cyan-500/20 rounded-full flex items-center justify-center mb-6 text-4xl glow">
                         ⚡
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">What is GEM Portal?</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-2xl font-bold mb-4 text-white">What is GEM Portal?</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
                         Government e-Marketplace (GeM) is a one-stop national procurement portal launched by the Government 
                         of India to facilitate online procurement of common use goods and services required by various 
                         government departments, organizations, and PSUs.
                     </p>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <p class="text-gray-300 leading-relaxed mb-4">
                         It brings transparency, efficiency, and speed in public procurement, making it mandatory for 
                         government agencies to procure goods and services through this digital platform.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Transparent</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Efficient</span>
-                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Digital</span>
-                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Nationwide</span>
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Transparent</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Efficient</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Digital</span>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Nationwide</span>
                     </div>
                 </div>
 
-                <div class="glass-effect p-8 rounded-2xl card-hover">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-4xl">
+                <div class="glass-effect p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300 card-3d">
+                    <div class="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mb-6 text-4xl glow">
                         🎯
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Why I Excel at GEM?</h3>
-                    <div class="space-y-3 text-gray-600">
-                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                            <span class="text-blue-600">✓</span>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Why I Excel at GEM?</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                            <span class="text-cyan-400">✓</span>
                             <span>Deep understanding of portal navigation and functionalities</span>
                         </div>
-                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                            <span class="text-blue-600">✓</span>
+                        <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                            <span class="text-cyan-400">✓</span>
                             <span>Expert in creating competitive bids with optimal pricing strategies</span>
                         </div>
-                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                            <span class="text-blue-600">✓</span>
+                        <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                            <span class="text-cyan-400">✓</span>
                             <span>Proficient in handling technical glitches and portal updates</span>
                         </div>
-                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                            <span class="text-blue-600">✓</span>
+                        <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                            <span class="text-cyan-400">✓</span>
                             <span>Experienced in vendor registration and product catalogue management</span>
                         </div>
-                        <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
-                            <span class="text-blue-600">✓</span>
+                        <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all magnetic">
+                            <span class="text-cyan-400">✓</span>
                             <span>Track record of winning high-value government contracts</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-effect p-8 rounded-2xl mb-12">
-                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Why I Love Working with GEM</h3>
+            <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-white">Why I Love Working with GEM</h3>
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
-                        <div class="text-5xl mb-4">🛡️</div>
-                        <h4 class="font-bold mb-2 text-lg text-gray-800">Transparency</h4>
-                        <p class="text-sm text-gray-600">Level playing field with clear guidelines and fair competition for all vendors</p>
+                    <div class="text-center p-6 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all card-3d magnetic">
+                        <div class="text-5xl mb-4 glow">🛡️</div>
+                        <h4 class="font-bold mb-2 text-lg text-white">Transparency</h4>
+                        <p class="text-sm text-gray-400">Level playing field with clear guidelines and fair competition for all vendors</p>
                     </div>
-                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
-                        <div class="text-5xl mb-4">⚡</div>
-                        <h4 class="font-bold mb-2 text-lg text-gray-800">Efficiency</h4>
-                        <p class="text-sm text-gray-600">Streamlined process that saves time, reduces paperwork, and speeds up procurement</p>
+                    <div class="text-center p-6 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all card-3d magnetic">
+                        <div class="text-5xl mb-4 glow">⚡</div>
+                        <h4 class="font-bold mb-2 text-lg text-white">Efficiency</h4>
+                        <p class="text-sm text-gray-400">Streamlined process that saves time, reduces paperwork, and speeds up procurement</p>
                     </div>
-                    <div class="text-center p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all card-hover">
-                        <div class="text-5xl mb-4">📈</div>
-                        <h4 class="font-bold mb-2 text-lg text-gray-800">Growth</h4>
-                        <p class="text-sm text-gray-600">Access to vast opportunities across all government sectors and departments</p>
+                    <div class="text-center p-6 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all card-3d magnetic">
+                        <div class="text-5xl mb-4 glow">📈</div>
+                        <h4 class="font-bold mb-2 text-lg text-white">Growth</h4>
+                        <p class="text-sm text-gray-400">Access to vast opportunities across all government sectors and departments</p>
                     </div>
                 </div>
             </div>
 
             <!-- Tender Process -->
             <div class="mb-12">
-                <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 section-title">Complete Tender Process Workflow</h3>
+                <h3 class="text-3xl font-bold mb-8 text-center text-white section-title">Complete Tender Process Workflow</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="tenderProcessContainer"></div>
             </div>
         </div>
     </section>
 
     <!-- Projects Portfolio -->
-    <section id="projects" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="projects" class="py-20 px-4 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Major Projects Portfolio</h2>
-                <p class="text-gray-600 text-lg">Successful Government Contracts Worth ₹60+ Crores</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">Major Projects Portfolio</h2>
+                <p class="text-gray-400 text-lg">Successful Government Contracts Worth ₹60+ Crores</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer"></div>
@@ -558,8 +614,8 @@
     <section id="services" class="py-20 px-4 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Consulting Services</h2>
-                <p class="text-gray-600 text-lg">Comprehensive Solutions for Your Tender Management Needs</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">Consulting Services</h2>
+                <p class="text-gray-400 text-lg">Comprehensive Solutions for Your Tender Management Needs</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesContainer"></div>
@@ -567,101 +623,101 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="contact" class="py-20 px-4 relative z-10">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 section-title">Let's Connect</h2>
-                <p class="text-gray-600 text-lg">Ready to discuss your tender management needs?</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white section-title">Let's Connect</h2>
+                <p class="text-gray-400 text-lg">Ready to discuss your tender management needs?</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <a href="https://wa.me/918287903077" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group">
-                    <span class="text-5xl">💬</span>
+                <a href="https://wa.me/918287903077" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group neon-button magnetic">
+                    <span class="text-5xl glow">💬</span>
                     <div>
                         <div class="font-bold text-xl mb-1 text-white">WhatsApp</div>
                         <div class="text-green-100">+91 8287903077</div>
                     </div>
                 </a>
 
-                <button onclick="downloadResume()" class="bg-gradient-to-r from-blue-600 to-purple-700 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group">
-                    <span class="text-5xl">📥</span>
+                <button onclick="downloadResume()" class="bg-gradient-to-r from-cyan-500 to-purple-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 group neon-button magnetic">
+                    <span class="text-5xl glow">📥</span>
                     <div>
                         <div class="font-bold text-xl mb-1 text-white">Download</div>
-                        <div class="text-blue-100">Resume PDF</div>
+                        <div class="text-cyan-100">Resume PDF</div>
                     </div>
                 </button>
             </div>
 
-            <div class="glass-effect p-8 rounded-2xl mb-12">
-                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Contact Details</h3>
+            <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20 mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-white">Contact Details</h3>
                 <div class="grid md:grid-cols-3 gap-6 text-center">
                     <div>
-                        <div class="text-4xl mb-3">📞</div>
-                        <div class="font-semibold mb-2 text-gray-800">Phone</div>
-                        <div class="text-gray-600">+91 8287903077</div>
+                        <div class="text-4xl mb-3 glow">📞</div>
+                        <div class="font-semibold mb-2 text-white">Phone</div>
+                        <div class="text-gray-400">+91 8287903077</div>
                     </div>
                     <div>
-                        <div class="text-4xl mb-3">✉️</div>
-                        <div class="font-semibold mb-2 text-gray-800">Email</div>
-                        <div class="text-gray-600 break-all text-sm">janmejay_jyoti@yahoo.com</div>
+                        <div class="text-4xl mb-3 glow">✉️</div>
+                        <div class="font-semibold mb-2 text-white">Email</div>
+                        <div class="text-gray-400 break-all text-sm">janmejay_jyoti@yahoo.com</div>
                     </div>
                     <div>
-                        <div class="text-4xl mb-3">📍</div>
-                        <div class="font-semibold mb-2 text-gray-800">Location</div>
-                        <div class="text-gray-600">Delhi - 110042, India</div>
+                        <div class="text-4xl mb-3 glow">📍</div>
+                        <div class="font-semibold mb-2 text-white">Location</div>
+                        <div class="text-gray-400">Delhi - 110042, India</div>
                     </div>
                 </div>
             </div>
 
             <!-- Contact Form -->
-            <div class="glass-effect p-8 rounded-2xl">
-                <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Send a Message</h3>
+            <div class="glass-effect p-8 rounded-2xl border border-cyan-500/20">
+                <h3 class="text-2xl font-bold mb-6 text-center text-white">Send a Message</h3>
                 <form id="contactForm" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Name</label>
-                        <input type="text" id="formName" required class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your name">
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Your Name</label>
+                        <input type="text" id="formName" required class="w-full p-3 bg-gray-800/30 rounded-lg border border-gray-700 focus:border-cyan-500 outline-none transition-all text-white" placeholder="Enter your name">
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Email</label>
-                        <input type="email" id="formEmail" required class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your email">
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Your Email</label>
+                        <input type="email" id="formEmail" required class="w-full p-3 bg-gray-800/30 rounded-lg border border-gray-700 focus:border-cyan-500 outline-none transition-all text-white" placeholder="Enter your email">
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-700">Your Message</label>
-                        <textarea id="formMessage" required rows="4" class="w-full p-3 bg-white rounded-lg border border-gray-300 focus:border-blue-500 outline-none transition-all text-gray-800" placeholder="Enter your message"></textarea>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Your Message</label>
+                        <textarea id="formMessage" required rows="4" class="w-full p-3 bg-gray-800/30 rounded-lg border border-gray-700 focus:border-cyan-500 outline-none transition-all text-white" placeholder="Enter your message"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg font-semibold text-white hover:shadow-lg transition-all">
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-semibold text-white hover:shadow-lg transition-all neon-button">
                         Send Message
                     </button>
                 </form>
-                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 border border-green-500 rounded-lg text-center">
-                    <span class="text-green-700 font-semibold">✓ Message sent successfully!</span>
+                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-center">
+                    <span class="text-green-400 font-semibold">✓ Message sent successfully!</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 glass-effect border-t border-gray-200 relative z-10">
+    <footer class="py-8 px-4 glass-effect border-t border-cyan-500/20 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center space-y-4">
                 <div class="flex items-center justify-center space-x-2 mb-4">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg flex items-center justify-center font-bold text-xl text-white">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-xl text-white neon-glow">
                         JV
                     </div>
-                    <span class="font-bold text-xl text-gray-800">Janmejay Vashisht</span>
+                    <span class="font-bold text-xl text-white neon-glow">Janmejay Vashisht</span>
                 </div>
-                <p class="text-gray-600">
+                <p class="text-gray-400">
                     Senior Tender Management Expert | 20+ Years Experience
                 </p>
                 <p class="text-gray-500 text-sm">
                     Specialized in Government Procurement, GEM Portal & Strategic Bidding
                 </p>
                 <div class="flex justify-center space-x-6 pt-4">
-                    <a href="tel:+918287903077" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">📞</a>
-                    <a href="mailto:janmejay_jyoti@yahoo.com" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">✉️</a>
-                    <a href="https://wa.me/918287903077" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors text-2xl">💬</a>
+                    <a href="tel:+918287903077" class="text-gray-500 hover:text-cyan-400 transition-colors text-2xl magnetic">📞</a>
+                    <a href="mailto:janmejay_jyoti@yahoo.com" class="text-gray-500 hover:text-cyan-400 transition-colors text-2xl magnetic">✉️</a>
+                    <a href="https://wa.me/918287903077" target="_blank" class="text-gray-500 hover:text-cyan-400 transition-colors text-2xl magnetic">💬</a>
                 </div>
-                <div class="pt-6 border-t border-gray-200 text-gray-500 text-sm">
+                <div class="pt-6 border-t border-gray-800 text-gray-500 text-sm">
                     <p>&copy; 2025 Janmejay Vashisht. All rights reserved.</p>
                     <p class="mt-2 text-xs">Designed & Developed with ❤️ for Excellence in Tender Management</p>
                 </div>
@@ -748,7 +804,7 @@
         ];
 
         const tenderProcess = [
-            { step: "01", title: "Tender Identification", description: "Monitoring portals like GEM, CPPP, and department websites for relevant opportunities", icon: "🔍", color: "from-blue-500 to-cyan-500" },
+            { step: "01", title: "Tender Identification", description: "Monitoring portals like GEM, CPPP, and department websites for relevant opportunities", icon: "🔍", color: "from-cyan-500 to-blue-500" },
             { step: "02", title: "Document Analysis", description: "Thorough review of tender documents, eligibility criteria, and technical specifications", icon: "📖", color: "from-purple-500 to-pink-500" },
             { step: "03", title: "Bid Preparation", description: "Preparing technical and commercial bids with accurate costing and documentation", icon: "📄", color: "from-green-500 to-teal-500" },
             { step: "04", title: "Internal Coordination", description: "Liaising with sales, accounts, and production teams for data verification", icon: "👥", color: "from-orange-500 to-red-500" },
@@ -774,8 +830,76 @@
             { icon: "🎯", title: "Tender Training", description: "Training programs for teams on tender management best practices", features: ["Portal Training", "Process Workshop", "Best Practices", "Q&A Sessions"], pricing: "Starting ₹30,000" }
         ];
 
+        // Initialize Three.js
+        function initThreeJS() {
+            const container = document.getElementById('threeBackground');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            // Add ambient light
+            const ambientLight = new THREE.AmbientLight(0x00ffff, 0.3);
+            scene.add(ambientLight);
+
+            // Add directional light
+            const directionalLight = new THREE.DirectionalLight(0x8a2be2, 0.5);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 5000;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for (let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 100;
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.05,
+                color: 0x00ffff
+            });
+
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            // Create a torus
+            const torusGeometry = new THREE.TorusGeometry(10, 3, 16, 100);
+            const torusMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x8a2be2,
+                wireframe: true
+            });
+            const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+            scene.add(torus);
+
+            camera.position.z = 25;
+
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+
+                torus.rotation.x += 0.01;
+                torus.rotation.y += 0.005;
+                particlesMesh.rotation.y += 0.001;
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        }
+
         // Initialize Typed.js
-        document.addEventListener('DOMContentLoaded', function() {
+        function initTypedJS() {
             const typed = new Typed('#typed-text', {
                 strings: [
                     'Senior Tender Executive',
@@ -788,7 +912,69 @@
                 backDelay: 2000,
                 loop: true
             });
-        });
+        }
+
+        // Custom cursor with trail
+        function initCustomCursor() {
+            const cursor = document.querySelector('.custom-cursor');
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            const trails = [];
+
+            // Create cursor trails
+            for (let i = 0; i < 5; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                document.body.appendChild(trail);
+                trails.push({
+                    element: trail,
+                    x: 0,
+                    y: 0,
+                    size: 6 - i
+                });
+            }
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                // Smooth cursor movement
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+
+                // Update trails
+                trails.forEach((trail, index) => {
+                    const nextTrail = index === 0 ? { x: cursorX, y: cursorY } : trails[index - 1];
+                    trail.x += (nextTrail.x - trail.x) * 0.3;
+                    trail.y += (nextTrail.y - trail.y) * 0.3;
+                    
+                    trail.element.style.left = trail.x + 'px';
+                    trail.element.style.top = trail.y + 'px';
+                    trail.element.style.width = trail.size + 'px';
+                    trail.element.style.height = trail.size + 'px';
+                });
+
+                requestAnimationFrame(animateCursor);
+            }
+
+            animateCursor();
+
+            // Magnetic effect for buttons
+            document.querySelectorAll('.magnetic').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                });
+            });
+        }
 
         // Counter Animation
         function animateCounter(id, target, duration) {
@@ -813,22 +999,6 @@
             animateCounter('counter3', 95, 2000);
         });
 
-        // Custom Cursor
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.querySelectorAll('a, button, .card-hover').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-hover');
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-hover');
-            });
-        });
-
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -845,26 +1015,6 @@
             } else {
                 scrollTopBtn.classList.add('hidden');
             }
-
-            // Update active nav link
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-item');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('nav-active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('nav-active');
-                }
-            });
         });
 
         // Mobile menu toggle
@@ -888,25 +1038,25 @@
         const experienceContainer = document.getElementById('experienceContainer');
         experiences.forEach(exp => {
             const expDiv = document.createElement('div');
-            expDiv.className = 'glass-effect p-8 rounded-2xl card-hover';
+            expDiv.className = 'glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d';
             expDiv.innerHTML = `
                 <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                     <div class="flex items-start space-x-4">
-                        <div class="w-16 h-16 bg-gradient-to-r ${exp.color} rounded-xl flex items-center justify-center flex-shrink-0 text-3xl text-white">
+                        <div class="w-16 h-16 bg-gradient-to-r ${exp.color} rounded-xl flex items-center justify-center flex-shrink-0 text-3xl text-white glow">
                             ${exp.icon}
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold mb-2 text-gray-800">${exp.title}</h3>
-                            <p class="text-blue-600 font-semibold text-lg">${exp.company}</p>
+                            <h3 class="text-2xl font-bold mb-2 text-white">${exp.title}</h3>
+                            <p class="text-cyan-400 font-semibold text-lg">${exp.company}</p>
                         </div>
                     </div>
-                    <div class="text-gray-600 mt-4 md:mt-0 md:text-right">
+                    <div class="text-gray-400 mt-4 md:mt-0 md:text-right">
                         <div class="flex items-center space-x-2 mb-1">
-                            <span>🕐</span>
+                            <span class="glow">🕐</span>
                             <span>${exp.period}</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <span>📍</span>
+                            <span class="glow">📍</span>
                             <span>${exp.location}</span>
                         </div>
                     </div>
@@ -914,22 +1064,22 @@
                 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <h4 class="font-bold text-lg mb-3 text-blue-600">Key Responsibilities:</h4>
+                        <h4 class="font-bold text-lg mb-3 text-cyan-400">Key Responsibilities:</h4>
                         <ul class="space-y-2">
                             ${exp.responsibilities.map(resp => `
-                                <li class="flex items-start space-x-3 text-gray-600">
-                                    <span class="text-blue-600 mt-1">→</span>
+                                <li class="flex items-start space-x-3 text-gray-300">
+                                    <span class="text-cyan-400 mt-1">→</span>
                                     <span>${resp}</span>
                                 </li>
                             `).join('')}
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-3 text-green-600">Major Achievements:</h4>
+                        <h4 class="font-bold text-lg mb-3 text-green-400">Major Achievements:</h4>
                         <ul class="space-y-2">
                             ${exp.achievements.map(ach => `
-                                <li class="flex items-start space-x-3 text-gray-600">
-                                    <span class="text-yellow-500 mt-1">🏆</span>
+                                <li class="flex items-start space-x-3 text-gray-300">
+                                    <span class="text-yellow-400 mt-1 glow">🏆</span>
                                     <span>${ach}</span>
                                 </li>
                             `).join('')}
@@ -954,20 +1104,20 @@
         const tenderProcessContainer = document.getElementById('tenderProcessContainer');
         tenderProcess.forEach(process => {
             const processDiv = document.createElement('div');
-            processDiv.className = 'glass-effect p-6 rounded-2xl card-hover relative overflow-hidden group';
+            processDiv.className = 'glass-effect p-6 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d relative overflow-hidden group';
             processDiv.innerHTML = `
-                <div class="absolute top-0 right-0 text-9xl font-bold text-blue-200 opacity-50 group-hover:opacity-70 transition-all">
+                <div class="absolute top-0 right-0 text-9xl font-bold text-cyan-500 opacity-5 group-hover:opacity-10 transition-all">
                     ${process.step}
                 </div>
                 <div class="relative z-10">
-                    <div class="w-16 h-16 bg-gradient-to-r ${process.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform text-3xl text-white">
+                    <div class="w-16 h-16 bg-gradient-to-r ${process.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform text-3xl text-white glow">
                         ${process.icon}
                     </div>
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full flex items-center justify-center font-bold text-xl text-white mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center font-bold text-xl text-white mb-4 glow">
                         ${process.step}
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-800">${process.title}</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">${process.description}</p>
+                    <h3 class="text-xl font-bold mb-3 text-white">${process.title}</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">${process.description}</p>
                 </div>
             `;
             tenderProcessContainer.appendChild(processDiv);
@@ -987,29 +1137,29 @@
         const projectsContainer = document.getElementById('projectsContainer');
         projects.forEach((project, index) => {
             const projectDiv = document.createElement('div');
-            projectDiv.className = 'glass-effect rounded-2xl card-hover overflow-hidden group cursor-pointer';
+            projectDiv.className = 'glass-effect rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d overflow-hidden group cursor-pointer';
             projectDiv.innerHTML = `
                 <div class="p-8">
-                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">${project.image}</div>
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform glow">${project.image}</div>
                     <div class="flex items-center justify-between mb-3">
-                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-semibold glow">
                             ${project.status}
                         </span>
-                        <span class="text-gray-600 text-sm">${project.year}</span>
+                        <span class="text-gray-400 text-sm">${project.year}</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">${project.title}</h3>
-                    <p class="text-blue-600 font-semibold mb-2">${project.client}</p>
-                    <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-700 mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">${project.title}</h3>
+                    <p class="text-cyan-400 font-semibold mb-2">${project.client}</p>
+                    <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 mb-4">
                         ${project.value}
                     </p>
-                    <p class="text-gray-600 text-sm mb-4">${project.description}</p>
+                    <p class="text-gray-400 text-sm mb-4">${project.description}</p>
                     
-                    <div id="projectHighlights${index}" class="hidden mt-4 pt-4 border-t border-gray-200">
-                        <h4 class="font-bold mb-2 text-gray-800">Key Highlights:</h4>
+                    <div id="projectHighlights${index}" class="hidden mt-4 pt-4 border-t border-gray-700">
+                        <h4 class="font-bold mb-2 text-white">Key Highlights:</h4>
                         <div class="space-y-2">
                             ${project.highlights.map(highlight => `
-                                <div class="flex items-center space-x-2 text-sm text-gray-600">
-                                    <span class="text-yellow-500">⭐</span>
+                                <div class="flex items-center space-x-2 text-sm text-gray-300">
+                                    <span class="text-yellow-400 glow">⭐</span>
                                     <span>${highlight}</span>
                                 </div>
                             `).join('')}
@@ -1038,29 +1188,29 @@
         const servicesContainer = document.getElementById('servicesContainer');
         services.forEach(service => {
             const serviceDiv = document.createElement('div');
-            serviceDiv.className = 'glass-effect p-8 rounded-2xl card-hover group';
+            serviceDiv.className = 'glass-effect p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 card-3d group';
             serviceDiv.innerHTML = `
-                <div class="text-5xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div class="text-5xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 glow">
                     ${service.icon}
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800">${service.title}</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">${service.description}</p>
+                <h3 class="text-xl font-bold mb-3 text-white">${service.title}</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">${service.description}</p>
                 
-                <div class="border-t border-gray-200 pt-4 mb-4">
-                    <h4 class="font-semibold mb-2 text-sm text-blue-600">Service Includes:</h4>
+                <div class="border-t border-gray-700 pt-4 mb-4">
+                    <h4 class="font-semibold mb-2 text-sm text-cyan-400">Service Includes:</h4>
                     <ul class="space-y-1">
                         ${service.features.map(feature => `
-                            <li class="text-sm text-gray-600 flex items-center space-x-2">
-                                <span class="text-green-600">✓</span>
+                            <li class="text-sm text-gray-400 flex items-center space-x-2">
+                                <span class="text-green-400 glow">✓</span>
                                 <span>${feature}</span>
                             </li>
                         `).join('')}
                     </ul>
                 </div>
                 
-                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                    <span class="text-lg font-bold text-green-600">${service.pricing}</span>
-                    <button class="px-4 py-2 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg text-sm font-semibold transition-all">
+                <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                    <span class="text-lg font-bold text-green-400">${service.pricing}</span>
+                    <button class="px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-lg text-sm font-semibold text-cyan-400 transition-all magnetic">
                         Learn More
                     </button>
                 </div>
@@ -1100,8 +1250,7 @@
 
         // Download Resume Function
         function downloadResume() {
-            alert('Resume download functionality - Please add your resume PDF URL here');
-            // window.location.href = 'YOUR_RESUME_PDF_URL';
+            window.open('https://drive.google.com/file/d/1qP1IzyFZt5IhWnv6jf7xhaC-Y6ZwXnto/view?usp=sharing', '_blank');
         }
 
         // Smooth scroll for anchor links
@@ -1120,12 +1269,16 @@
         const fadeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, { threshold: 0.1 });
 
         fadeElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 1s ease, transform 1s ease';
             fadeObserver.observe(el);
         });
 
@@ -1151,36 +1304,32 @@
             if (aboutSection) skillObserver.observe(aboutSection);
         }, 100);
 
-        // Initialize particles.js
-        document.addEventListener('DOMContentLoaded', function() {
-            // This would initialize particles.js with your configuration
-            // For now, we'll just add a simple placeholder
-            console.log('Particles.js would be initialized here');
-        });
-
-        // Initialize GSAP animations
+        // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
         
-        // Animate sections on scroll
-        gsap.utils.toArray('.fade-in').forEach(section => {
-            gsap.fromTo(section, 
-                { opacity: 0, y: 50 },
-                { 
-                    opacity: 1, 
-                    y: 0, 
-                    duration: 1, 
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
+        // Parallax effect for elements
+        gsap.utils.toArray('.parallax-element').forEach(el => {
+            gsap.to(el, {
+                y: -50,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
                 }
-            );
+            });
         });
 
-        console.log('Portfolio website loaded successfully! 🎉');
-        console.log('Features: Responsive, Interactive, Animated, Professional');
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initThreeJS();
+            initTypedJS();
+            initCustomCursor();
+            
+            console.log('Dark Premium Corporate 3D Portfolio loaded successfully! 🎉');
+            console.log('Features: 3D Background, Neon Effects, Custom Cursor, GSAP Animations');
+        });
     </script>
 </body>
 </html>
